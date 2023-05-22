@@ -1,0 +1,90 @@
+.content {
+  &__item {
+    padding: cs(50) cs(170);
+  }
+}
+
+.info-block {
+  &__title {
+    color: #00005a;
+    font-size: cs(36);
+    line-height: cs(47);
+    margin-bottom: cs(30);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__description {
+    max-width: cs(775);
+  }
+
+  &__text {
+    font-size: cs(24);
+    line-height: cs(31);
+  }
+
+  &__button {
+    font-size: cs(24);
+    line-height: cs(31);
+    margin-top: cs(30);
+    background: none;
+    color: #e13181;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 30%;
+      right: -20px;
+      background-image: url('../../images/pink_arrow.svg');
+      width: cs(10);
+      height: cs(15);
+    }
+  }
+}
+
+.logo {
+  width: cs(506);
+  height: cs(120);
+}
+
+.partners {
+  width: cs(280);
+  height: cs(280);
+}
+
+.news-block {
+  width: cs(506);
+  &__photo {
+    width: cs(506);
+    height: cs(250);
+  }
+
+  &__date {
+    color: #8a8a8d;
+    margin: cs(20) 0 cs(15);
+    font-size: cs(12);
+    line-height: cs(14);
+  }
+
+  &__sub-title {
+    color: #00005a;
+    font-size: cs(18);
+    line-height: cs(23);
+    margin-bottom: cs(15);
+  }
+
+  &__text {
+    font-size: cs(16);
+    line-height: cs(21);
+  }
+}
+
+.bg {
+  background: #fcfcfc;
+  padding: cs(72) cs(170) cs(100);
+}
