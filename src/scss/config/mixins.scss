@@ -204,3 +204,32 @@
 @function cs($pixels) {
   @return calc(((#{$pixels} / var(--gfs)) * 100) * 1vw);
 }
+
+@function clampSize($min, $max) {
+  @return max(#{$min}px, #{cs($max)});
+}
+
+@mixin fontType(
+  $font-size,
+  $line-height,
+  $font-type: regular,
+  $max-size: #{clampSize(12, $font-size)},
+  $max-line-height: #{cs($line-height)}
+) {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-size: min(#{clampSize(12, $font-size)}, #{$max-size});
+  line-height: min(#{cs($line-height)}, #{$max-line-height});
+  @if $font-type==bold {
+    font-weight: 700;
+  }
+  @if $font-type==semiBold {
+    font-weight: 600;
+  }
+  @if $font-type==medium {
+    font-weight: 500;
+  }
+  @if $font-type==regular {
+    font-weight: 400;
+  }
+}
