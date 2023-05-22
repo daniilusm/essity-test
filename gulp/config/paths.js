@@ -1,7 +1,7 @@
 import path from 'path';
 
 const projectDirName = path.basename(path.resolve());
-const buildFolder = `./docs`;
+const buildFolder = `./piblic`;
 const srcFolder = `./src`;
 
 const filePaths = {
