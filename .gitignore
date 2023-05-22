@@ -2,7 +2,7 @@
 .idea
 .temporary_cache
 
-piblic
+public
 dist
 node_modules
 package-lock.json
