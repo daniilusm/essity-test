@@ -1,6 +1,10 @@
 .content {
   &__item {
     padding: cs(50) cs(170);
+
+    @include tablet {
+      padding: cs(50) cs(25);
+    }
   }
 }
 
@@ -9,20 +13,40 @@
     color: #00005a;
     @include fontType(36, 47, medium);
     margin-bottom: cs(30);
+
+    @include tablet {
+      @include fontType(28, 36, medium);
+      text-align: center;
+    }
   }
 
   &__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
   }
 
   &__description {
     max-width: cs(775);
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__text {
     @include fontType(24, 31, medium);
+
+    @include tablet {
+      @include fontType(20, 26, medium);
+    }
   }
 
   &__button {
@@ -53,6 +77,11 @@
 .partners {
   width: cs(280);
   height: cs(280);
+
+  @include tablet {
+    width: cs(160);
+    height: cs(160);
+  }
 }
 
 .news-block {
@@ -82,4 +111,16 @@
 .bg {
   background: #fcfcfc;
   padding: cs(72) cs(170) cs(100);
+}
+
+.mobile-hidden {
+  @include tablet {
+    display: none;
+  }
+}
+
+.center {
+  @include tablet {
+    justify-content: center;
+  }
 }
