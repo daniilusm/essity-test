@@ -1,5 +1,5 @@
-import toggleBodyLock from './../helpers/toggleBodyLock';
-import { html, firstScreen, header } from './../helpers/elementsNodeList';
+import toggleBodyLock from '../helpers/toggleBodyLock';
+import { html, firstScreen, header } from '../helpers/elementsNodeList';
 
 // Проверка браузера на поддержку .webp изображений ======================================================
 function isWebp() {

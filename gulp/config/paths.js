@@ -2,7 +2,7 @@ import path from 'path';
 
 const projectDirName = path.basename(path.resolve());
 const buildFolder = `./dist`;
-const srcFolder = `./src`;
+const srcFolder = `./docs`;
 
 const filePaths = {
   build: {
