@@ -3,7 +3,7 @@
     padding: cs(50) cs(170);
 
     @include tablet {
-      padding: cs(50) cs(25);
+      padding: cs(50) cs(20) 0;
     }
   }
 }
@@ -46,6 +46,7 @@
 
     @include tablet {
       @include fontType(20, 26, medium);
+      color: #00005a;
     }
   }
 
@@ -63,8 +64,17 @@
       right: -20px;
       background-image: url('../../images/pink_arrow.svg');
       background-size: contain;
+      background-repeat: no-repeat;
       width: cs(10);
       height: cs(15);
+    }
+    @include tablet {
+      @include fontType(18, 23, bold);
+      margin-top: cs(20);
+
+      &::after {
+        top: 20%;
+      }
     }
   }
 }
@@ -79,8 +89,8 @@
   height: cs(280);
 
   @include tablet {
-    width: cs(160);
-    height: cs(160);
+    width: cs(154);
+    height: cs(154);
   }
 }
 
@@ -89,38 +99,110 @@
   &__photo {
     width: cs(506);
     height: cs(250);
+
+    @include tablet {
+      width: cs(327);
+      height: cs(193);
+    }
   }
 
   &__date {
     color: #8a8a8d;
     margin: cs(20) 0 cs(15);
     @include fontType(12, 14, regular);
+
+    @include tablet {
+      margin: cs(30) 0 cs(15);
+    }
   }
 
   &__sub-title {
     color: #00005a;
     @include fontType(18, 23, semiBold);
     margin-bottom: cs(15);
+
+    @include tablet {
+      @include fontType(16, 21, medium);
+    }
   }
 
   &__text {
     @include fontType(16, 21, medium);
+
+    @include tablet {
+      @include fontType(14, 18, medium);
+    }
   }
 }
 
 .bg {
   background: #fcfcfc;
   padding: cs(72) cs(170) cs(100);
+
+  @include tablet {
+    padding: cs(50) cs(25) cs(30);
+  }
 }
 
 .mobile-hidden {
   @include tablet {
     display: none;
+    visibility: hidden;
+  }
+}
+
+.mobile-visible {
+  display: none;
+  visibility: hidden;
+
+  @include tablet {
+    display: block;
+    visibility: visible;
   }
 }
 
 .center {
   @include tablet {
     justify-content: center;
+  }
+}
+
+.mySwiper {
+  padding-bottom: cs(100) !important;
+}
+
+.small-button {
+  @include fontType(18, 23, semiBold);
+  margin-top: cs(23);
+}
+
+.without-arrow {
+  &::after {
+    display: none;
+  }
+}
+
+.partners-wrapper {
+  padding-bottom: cs(30);
+  @include tablet {
+    padding: cs(35) cs(20) 0;
+  }
+}
+
+.partners-block {
+  margin-right: cs(80);
+  @include tablet {
+    margin-right: 0;
+  }
+}
+
+.partners-title {
+  margin-bottom: cs(10);
+}
+
+.news-title {
+  margin-bottom: cs(50);
+  @include tablet {
+    margin-bottom: cs(25);
   }
 }

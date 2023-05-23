@@ -6,6 +6,7 @@
 
  * Если мы хотим добавить модуль следует его раскомментировать
  */
+
 import {
   isWebp,
   headerFixed,
@@ -22,7 +23,17 @@ import {
 
 // import AOS from 'aos'
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
+// import Swiper from 'swiper';
+
+// const swiper = new Swiper('.mySwiper', {
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });
 
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML
  ! (i) необходимо для корректного отображения webp из css
