@@ -1,6 +1,6 @@
 .content {
   &__item {
-    padding: cs(50) cs(170);
+    padding: cs(87) cs(170);
 
     @include tablet {
       padding: cs(50) cs(20) 0;
@@ -8,9 +8,26 @@
   }
 }
 
-.info-block {
+.welcome {
+  height: cs(684);
+  background-image: url('../../images/welcome-bg.png');
+  background-size: cover;
+  padding: cs(130) cs(170);
+
   &__title {
-    color: #00005a;
+    color: $navy;
+    @include fontType(80, 92, medium);
+  }
+}
+
+.info-block {
+  &__logo {
+    width: cs(506);
+    height: cs(120);
+  }
+
+  &__title {
+    color: $navy;
     @include fontType(36, 47, medium);
     margin-bottom: cs(30);
 
@@ -46,7 +63,7 @@
 
     @include tablet {
       @include fontType(20, 26, medium);
-      color: #00005a;
+      color: $navy;
     }
   }
 
@@ -54,7 +71,7 @@
     @include fontType(24, 31, bold);
     margin-top: cs(30);
     background: none;
-    color: #e13181;
+    color: $deepCerise;
     position: relative;
 
     &::after {
@@ -62,7 +79,7 @@
       position: absolute;
       top: 30%;
       right: -20px;
-      background-image: url('../../images/pink_arrow.svg');
+      background-image: url('../../images/icons/pink_arrow.svg');
       background-size: contain;
       background-repeat: no-repeat;
       width: cs(10);
@@ -77,11 +94,6 @@
       }
     }
   }
-}
-
-.logo {
-  width: cs(506);
-  height: cs(120);
 }
 
 .partners {
@@ -107,7 +119,7 @@
   }
 
   &__date {
-    color: #8a8a8d;
+    color: $greySuit;
     margin: cs(20) 0 cs(15);
     @include fontType(12, 14, regular);
 
@@ -117,7 +129,7 @@
   }
 
   &__sub-title {
-    color: #00005a;
+    color: $navy;
     @include fontType(18, 23, semiBold);
     margin-bottom: cs(15);
 
@@ -135,29 +147,12 @@
   }
 }
 
-.bg {
-  background: #fcfcfc;
+.news-wrapper {
+  background: $whiteColor;
   padding: cs(72) cs(170) cs(100);
 
   @include tablet {
     padding: cs(50) cs(25) cs(30);
-  }
-}
-
-.mobile-hidden {
-  @include tablet {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.mobile-visible {
-  display: none;
-  visibility: hidden;
-
-  @include tablet {
-    display: block;
-    visibility: visible;
   }
 }
 

@@ -233,3 +233,16 @@
     font-weight: 400;
   }
 }
+
+@mixin arialFont(
+  $font-size,
+  $line-height,
+  $max-size: #{clampSize(12, $font-size)},
+  $max-line-height: #{cs($line-height)}
+) {
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
+  font-size: min(#{clampSize(12, $font-size)}, #{$max-size});
+  line-height: min(#{cs($line-height)}, #{$max-line-height});
+  font-weight: 400;
+}

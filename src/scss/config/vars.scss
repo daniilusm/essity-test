@@ -10,15 +10,18 @@ $mainOffset: 15; // отступы безопасности для контей�
 $mainFont: ''; // !указать здесь основное семейство шрифта
 $mainWeight: 400; // !указать здесь основное начертание шрифта
 
-$headerHeight: 100;
-$footerHeight: 100;
+$headerHeight: 70;
+$footerHeight: 720;
 
 $mainRadius: rem(10);
 
-$whiteColor: #fff;
+$whiteColor: #fcfcfc;
 $blackColor: #131313;
 $grayColor: #6f6f6f;
 $redColor: #ff4040;
+$navy: #00005a;
+$deepCerise: #e13181;
+$greySuit: #8a8a8d;
 
 $firstAccentColor: $blackColor;
 $secondAccentColor: $redColor;

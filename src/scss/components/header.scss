@@ -1,18 +1,70 @@
-// =====================================================================================================================
 .header {
   width: 100%;
 
-  &.sticky {
-    // ..стили для липкого хедера
-  }
+  // &.sticky {
+  //   // ..стили для липкого хедера
+  // }
 
-  // .header__container
   &__container {
-    height: rem($headerHeight);
+    height: cs($headerHeight);
+    padding: 0 cs(170);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo-img {
+    width: cs(126);
+    height: cs(30);
   }
 }
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    color: $navy;
+    @include fontType(16, 22, bold);
+    @include notLast {
+      margin-right: cs(60);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 30%;
+      right: -20px;
+      background-image: url('../../images/icons/dropdown-arrow.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: cs(10);
+      height: cs(15);
+    }
+  }
+
+  &__button {
+    margin-left: cs(127);
+    @include fontType(16, 22, bold);
+    color: $deepCerise;
+    background-color: $whiteColor;
+    width: cs(180);
+    height: cs(46);
+    border: 2px solid $deepCerise;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $whiteColor;
+      background-color: $deepCerise;
+    }
+  }
+}
+
 // =====================================================================================================================
 
 // Burger
