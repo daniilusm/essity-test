@@ -27,6 +27,10 @@
 
   &__left {
     margin-top: cs(7);
+
+    @include tablet {
+      width: cs(210);
+    }
   }
 
   &__right {
@@ -35,6 +39,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include tablet {
+      width: cs(654);
+    }
   }
 }
 
@@ -77,6 +85,10 @@
   grid-template-rows: repeat(2, cs(220));
   grid-gap: cs(20);
   margin-bottom: cs(-50);
+
+  @include tablet {
+    grid-template-columns: repeat(3, cs(225));
+  }
 }
 
 .mb20 {

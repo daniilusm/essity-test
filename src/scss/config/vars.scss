@@ -4,14 +4,17 @@ $maxWidthContainer: 1200; // ширина контейнера с учетом p
 $containerWidth: 1160; // ширина контейнера из макета$baseScreenSize: 1920;
 
 $tabletScreenSize: 1024;
-$mobileScreenSize: 550;
+$mobileScreenSize: 390;
 
 $mainOffset: 15; // отступы безопасности для контейнера
 $mainFont: ''; // !указать здесь основное семейство шрифта
 $mainWeight: 400; // !указать здесь основное начертание шрифта
 
 $headerHeight: 70;
+$headerTabletHeight: 60;
+$headerMobileHeight: 90;
 $footerHeight: 720;
+$footerMobileHeight: 882;
 
 $mainRadius: rem(10);
 
