@@ -1,11 +1,4 @@
 .content {
-  &__item {
-    padding: cs(87) cs(170);
-
-    @include tablet {
-      padding: cs(50) cs(20) 0;
-    }
-  }
 }
 
 .welcome {
@@ -14,16 +7,38 @@
   background-size: cover;
   padding: cs(125) cs(170);
 
+  @include tablet {
+    height: cs(640);
+    padding: cs(172) cs(32);
+    background-image: url('../../images/welcome-bg-tablet.png');
+    background-size: cover;
+  }
+
   &__title {
     color: $navy;
     @include fontType(80, 92, medium);
+
+    @include tablet {
+      @include fontType(69, 69, medium);
+    }
   }
 }
 
-.info-block {
+.about-company {
+  margin-top: cs(87);
+
+  @include mobile {
+    margin-top: cs(50);
+  }
+}
+
+.main-info {
   &__logo {
     width: cs(506);
     height: cs(120);
+
+    @include tablet {
+    }
   }
 
   &__title {
@@ -31,7 +46,7 @@
     @include fontType(36, 47, medium);
     margin-bottom: cs(30);
 
-    @include tablet {
+    @include mobile {
       @include fontType(28, 36, medium);
       text-align: center;
     }
@@ -42,7 +57,7 @@
     flex-direction: row;
     justify-content: space-between;
 
-    @include tablet {
+    @include mobile {
       flex-wrap: wrap;
     }
   }
@@ -50,7 +65,7 @@
   &__description {
     max-width: cs(775);
 
-    @include tablet {
+    @include mobile {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -61,53 +76,80 @@
   &__text {
     @include fontType(24, 31, medium);
 
-    @include tablet {
+    @include mobile {
       @include fontType(20, 26, medium);
       color: $navy;
     }
   }
+}
 
-  &__button {
-    @include fontType(24, 31, bold);
-    margin-top: cs(30);
-    background: none;
-    color: $deepCerise;
-    position: relative;
+.more-btn {
+  @include fontType(24, 31, bold);
+  margin-top: cs(30);
+  background: none;
+  color: $deepCerise;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: -20px;
+    background-image: url('../../images/icons/pink_arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: cs(10);
+    height: cs(15);
+  }
+  @include mobile {
+    @include fontType(18, 23, bold);
+    margin-top: cs(20);
 
     &::after {
-      content: '';
-      position: absolute;
-      top: 30%;
-      right: -20px;
-      background-image: url('../../images/icons/pink_arrow.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: cs(10);
-      height: cs(15);
-    }
-    @include tablet {
-      @include fontType(18, 23, bold);
-      margin-top: cs(20);
-
-      &::after {
-        top: 20%;
-      }
+      top: 20%;
     }
   }
 }
 
 .partners {
-  width: cs(280);
-  height: cs(280);
+  margin: cs(100) 0 cs(30);
 
   @include tablet {
-    width: cs(154);
-    height: cs(154);
+    padding-top: cs(35);
+    padding-bottom: 0;
+  }
+
+  &__wrapper {
+    margin-right: cs(80);
+    @include tablet {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: cs(10);
+  }
+
+  &__logo {
+    width: cs(280);
+    height: cs(280);
+
+    @include tablet {
+      width: cs(154);
+      height: cs(154);
+    }
   }
 }
 
-.news-block {
-  width: cs(506);
+.news {
+  background: $whiteColor;
+  padding-top: cs(70);
+  margin-bottom: cs(100);
+
+  &__item {
+    width: cs(506);
+  }
+
   &__photo {
     width: cs(506);
     height: cs(250);
@@ -115,6 +157,13 @@
     @include tablet {
       width: cs(327);
       height: cs(193);
+    }
+  }
+  &__title {
+    margin-bottom: cs(50);
+
+    @include tablet {
+      margin-bottom: cs(25);
     }
   }
 
@@ -147,17 +196,8 @@
   }
 }
 
-.news-wrapper {
-  background: $whiteColor;
-  padding: cs(72) cs(170) cs(100);
-
-  @include tablet {
-    padding: cs(50) cs(25) cs(30);
-  }
-}
-
-.center {
-  @include tablet {
+.mobile-center {
+  @include mobile {
     justify-content: center;
   }
 }
@@ -174,30 +214,5 @@
 .without-arrow {
   &::after {
     display: none;
-  }
-}
-
-.partners-wrapper {
-  padding: cs(10) cs(170) cs(30);
-  @include tablet {
-    padding: cs(35) cs(20) 0;
-  }
-}
-
-.partners-block {
-  margin-right: cs(80);
-  @include tablet {
-    margin-right: 0;
-  }
-}
-
-.partners-title {
-  margin-bottom: cs(10);
-}
-
-.news-title {
-  margin-bottom: cs(50);
-  @include tablet {
-    margin-bottom: cs(25);
   }
 }

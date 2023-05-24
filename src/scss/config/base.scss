@@ -16,11 +16,18 @@ body {
 * всем классам содержащим *__container
 * Например header__container, main__container и т.д.
 */
-// [class*='__container'] {
-//   max-width: rem($containerWidth + $mainOffset * 2);
-//   margin: 0 auto;
-//   padding: 0 rem($mainOffset);
-// }
+[class*='__container'] {
+  margin: 0 auto;
+  padding: 0 cs(170);
+
+  @include tablet {
+    padding: 0 cs(32);
+  }
+
+  @include mobile {
+    padding: 0 cs(20);
+  }
+}
 // Стили отзывчивых картинок (IBG) ============================================
 [class*='-ibg'] {
   position: relative;
@@ -94,7 +101,7 @@ body {
 }
 
 .mobile-hidden {
-  @include tablet {
+  @include mobile {
     display: none;
     visibility: hidden;
   }
@@ -104,7 +111,7 @@ body {
   display: none;
   visibility: hidden;
 
-  @include tablet {
+  @include mobile {
     display: block;
     visibility: visible;
   }

@@ -1,10 +1,6 @@
 .header {
   width: 100%;
 
-  // &.sticky {
-  //   // ..стили для липкого хедера
-  // }
-
   &__container {
     height: cs($headerHeight);
     padding: 0 cs(160) 0 cs(170);
