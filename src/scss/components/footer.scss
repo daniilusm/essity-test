@@ -1,5 +1,5 @@
 .footer {
-  padding: cs(63) cs(170) cs(50);
+  padding: cs(63) cs(160) cs(50);
   background: $navy;
   height: cs($footerHeight);
 
@@ -24,9 +24,13 @@
     }
   }
 
+  &__left {
+    margin-top: cs(7);
+  }
+
   &__right {
     height: 100%;
-    width: cs(830);
+    width: cs(822);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -69,8 +73,9 @@
 .grid-blocks {
   display: grid;
   grid-template-columns: repeat(3, cs(260));
-  grid-template-rows: repeat(2, cs(200));
+  grid-template-rows: repeat(2, cs(220));
   grid-gap: cs(20);
+  margin-bottom: cs(-50);
 }
 
 .mb20 {

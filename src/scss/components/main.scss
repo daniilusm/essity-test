@@ -12,7 +12,7 @@
   height: cs(684);
   background-image: url('../../images/welcome-bg.png');
   background-size: cover;
-  padding: cs(130) cs(170);
+  padding: cs(125) cs(170);
 
   &__title {
     color: $navy;
@@ -178,7 +178,7 @@
 }
 
 .partners-wrapper {
-  padding-bottom: cs(30);
+  padding: cs(10) cs(170) cs(30);
   @include tablet {
     padding: cs(35) cs(20) 0;
   }
