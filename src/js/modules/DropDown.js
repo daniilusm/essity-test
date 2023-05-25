@@ -7,7 +7,6 @@ class DropDown {
     if (this.dropdownItems.length > 0) {
       this.dropdownItems.forEach((item) => {
         item.firstElementChild.addEventListener('click', ({ target }) => {
-          console.info('click');
           if (target.nextElementSibling.style.display === 'none') {
             target.nextElementSibling.style.display = 'block';
             target.classList.add('rotate180');

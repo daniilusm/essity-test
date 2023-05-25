@@ -68,6 +68,7 @@
 
 .burger-menu {
   &__wrapper {
+    overflow-y: scroll;
     width: 100%;
     position: fixed;
     height: 100vh;
@@ -88,6 +89,7 @@
   &__logo {
     width: cs(146);
     height: cs(35);
+    margin-bottom: cs(25);
   }
 
   &__content {
@@ -101,6 +103,19 @@
     width: cs(17);
     height: cs(17);
   }
+
+  &__button {
+    width: 100%;
+    margin: 0;
+    color: $whiteColor;
+    background: $navy;
+    border: 2px solid $whiteColor;
+
+    &:hover {
+      color: $navy;
+      background-color: $whiteColor;
+    }
+  }
 }
 
 .menu-open {
@@ -109,7 +124,7 @@
 
 .burger-dropdown {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: cs(15);
+  padding: cs(15) 0 cs(15);
   transition: all 0.5s ease;
 
   &__title {
