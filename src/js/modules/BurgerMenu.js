@@ -13,8 +13,10 @@ class BurgerMenu {
       if (this.burgerButton.nextElementSibling) {
         const crossElem = this.burgerButton.nextElementSibling.children[0];
         crossElem.addEventListener('click', ({ target }) => {
-          const burgerMenu = target.parentElement.parentElement;
-          burgerMenu.classList.remove('menu-open');
+          if (target.closest('#burger-cross')) {
+            const burgerMenu = target.parentElement.parentElement;
+            burgerMenu.classList.remove('menu-open');
+          }
         });
       }
     }

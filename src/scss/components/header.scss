@@ -40,7 +40,7 @@
       content: '';
       position: absolute;
       top: 30%;
-      right: -20px;
+      right: cs(-20);
       background-image: url('../../images/icons/dropdown-arrow.png');
       background-size: contain;
       background-repeat: no-repeat;
@@ -69,19 +69,25 @@
 .burger-menu {
   &__wrapper {
     overflow-y: scroll;
-    width: 100%;
+    width: 50%;
     position: fixed;
     height: 100vh;
     top: 0;
     left: 0;
     background-color: $navy;
     z-index: 2;
-    transform: translate(100%, 0);
+    transform: translate(200%, 0);
     transition: transform 0.5s ease;
     padding: cs(38) cs(25) cs(40);
+
+    @include mobile {
+      width: 100%;
+      transform: translate(100%, 0);
+    }
   }
 
   &__icon {
+    cursor: pointer;
     width: cs(24);
     height: cs(17);
   }
@@ -97,6 +103,7 @@
   }
 
   &__cross {
+    cursor: pointer;
     top: cs(10);
     right: 0;
     position: absolute;
@@ -120,7 +127,10 @@
 }
 
 .menu-open {
-  transform: translate(0, 0);
+  transform: translate(100%, 0);
+  @include mobile {
+    transform: translate(0, 0);
+  }
 }
 
 .burger-dropdown {
