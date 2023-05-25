@@ -43,7 +43,7 @@
   }
 
   @include mobile {
-    margin-top: cs(50);
+    margin-top: cs(40);
   }
 }
 
@@ -74,6 +74,7 @@
 
     @include mobile {
       @include fontType(28, 36, medium);
+      margin-bottom: cs(20);
     }
   }
 
@@ -98,6 +99,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      margin-bottom: cs(30);
     }
   }
 
@@ -156,6 +158,10 @@
     margin: cs(60) 0 0;
   }
 
+  @include mobile {
+    margin-top: cs(40);
+  }
+
   &__wrapper {
     margin-right: cs(80);
     @include tablet {
@@ -193,6 +199,10 @@
     padding-bottom: cs(60);
   }
 
+  @include mobile {
+    padding-bottom: 0;
+  }
+
   &__item {
     width: cs(506);
 
@@ -209,6 +219,10 @@
       object-fit: cover;
       width: cs(307);
       height: cs(200);
+    }
+
+    @include mobile {
+      width: cs(335);
     }
   }
 
@@ -245,7 +259,7 @@
 
     @include tablet {
       @include fontType(14, 18, medium);
-      height: cs(58);
+      height: cs(56);
       overflow: hidden;
     }
   }
@@ -259,6 +273,10 @@
 
 .mySwiper {
   padding-bottom: cs(100) !important;
+
+  @include mobile {
+    padding-bottom: cs(35) !important;
+  }
 }
 
 .small-button {
