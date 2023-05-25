@@ -110,6 +110,7 @@
     color: $whiteColor;
     background: $navy;
     border: 2px solid $whiteColor;
+    margin-top: cs(40);
 
     &:hover {
       color: $navy;
@@ -124,14 +125,16 @@
 
 .burger-dropdown {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: cs(15) 0 cs(15);
+  margin-top: cs(15);
   transition: all 0.5s ease;
 
   &__title {
+    width: max-content;
     cursor: pointer;
     position: relative;
     color: $whiteColor;
     @include fontType(24, 33, bold);
+    margin-bottom: cs(15);
 
     &::after {
       content: '';
@@ -142,7 +145,7 @@
       width: cs(13);
       height: cs(7);
       top: 40%;
-      left: 45%;
+      right: cs(-20);
     }
   }
 
@@ -151,6 +154,8 @@
   }
 
   &__link {
+    margin-bottom: cs(15);
+
     a {
       color: $whiteColor;
       @include fontType(20, 23, regular);
