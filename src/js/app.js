@@ -15,7 +15,8 @@ import {
   addLoadedClass,
 } from './modules';
 
-// import BurgerMenu from './modules/BurgerMenu';
+import BurgerMenu from './modules/BurgerMenu';
+import DropDown from './modules/DropDown';
 
 // import Tabs from 'modules/Tabs';
 
@@ -41,7 +42,8 @@ isWebp();
 // addLoadedClass();
 
 /* Модуль для работы с меню (Бургер) */
-// new BurgerMenu().init();
+new BurgerMenu().init();
+new DropDown().init();
 
 /**
  *  Библиотека для анимаций

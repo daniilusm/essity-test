@@ -183,11 +183,11 @@
   }
 }
 
-// @mixin desktop() {
-//   @media only screen and (max-width: #{$baseScreenSize}px) {
-//     @content;
-//   }
-// }
+@mixin desktop() {
+  @media only screen and (max-width: #{$baseScreenSize}px) {
+    @content;
+  }
+}
 
 @mixin tablet() {
   @media only screen and (max-width: #{$tabletScreenSize}px) {
@@ -209,17 +209,11 @@
   @return max(#{$min}px, #{cs($max)});
 }
 
-@mixin fontType(
-  $font-size,
-  $line-height,
-  $font-type: regular,
-  $max-size: #{clampSize(12, $font-size)},
-  $max-line-height: #{cs($line-height)}
-) {
+@mixin fontType($font-size, $line-height, $font-type: regular) {
   font-family: 'Manrope', sans-serif;
   font-style: normal;
-  font-size: min(#{clampSize(12, $font-size)}, #{$max-size});
-  line-height: min(#{cs($line-height)}, #{$max-line-height});
+  font-size: cs($font-size);
+  line-height: cs($line-height);
   @if $font-type==bold {
     font-weight: 700;
   }
@@ -234,15 +228,10 @@
   }
 }
 
-@mixin arialFont(
-  $font-size,
-  $line-height,
-  $max-size: #{clampSize(12, $font-size)},
-  $max-line-height: #{cs($line-height)}
-) {
+@mixin arialFont($font-size, $line-height) {
   font-family: 'Arial', sans-serif;
   font-style: normal;
-  font-size: min(#{clampSize(12, $font-size)}, #{$max-size});
-  line-height: min(#{cs($line-height)}, #{$max-line-height});
+  font-size: cs($font-size);
+  line-height: cs($line-height);
   font-weight: 400;
 }
