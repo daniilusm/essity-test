@@ -90,6 +90,7 @@
   &__item {
     padding: cs(14);
     transition: all 0.3s;
+    @include fontType(16, 18, regular);
 
     &:hover {
       background-color: #ebebeb;
