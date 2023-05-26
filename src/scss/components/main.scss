@@ -126,16 +126,29 @@
   &::after {
     content: '';
     position: absolute;
-    top: 30%;
-    right: -20px;
+    top: 33%;
+    right: cs(-20);
     background-image: url('../../images/icons/pink_arrow.svg');
     background-size: contain;
     background-repeat: no-repeat;
     width: cs(10);
-    height: cs(15);
+    height: cs(10);
+    transition: right 0.5s ease;
+  }
+
+  &:hover {
+    &::after {
+      right: cs(-30);
+    }
   }
 
   @include tablet {
+    &::after {
+      top: 40%;
+    }
+  }
+
+  @include mobile {
     &::after {
       top: 23%;
     }
@@ -205,6 +218,14 @@
 
   &__item {
     width: cs(506);
+
+    &:hover {
+      .more-btn {
+        &::after {
+          right: cs(-30);
+        }
+      }
+    }
 
     @include tablet {
       width: cs(307);
