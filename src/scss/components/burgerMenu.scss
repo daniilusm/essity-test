@@ -93,14 +93,11 @@
 
     &::after {
       content: '';
-      background-image: url('../../images/icons/white-arrow.png');
-      background-size: contain;
-      background-repeat: no-repeat;
+      @include arrow($whiteArrow, 0, 15, 10);
       position: absolute;
-      width: cs(13);
-      height: cs(7);
-      top: 40%;
-      right: cs(-20);
+      top: 30%;
+      right: cs(-30);
+      transition: all 0.3s;
     }
   }
 

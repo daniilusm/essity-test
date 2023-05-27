@@ -127,30 +127,14 @@
     content: '';
     position: absolute;
     top: 33%;
-    right: cs(-20);
-    background-image: url('../../images/icons/pink_arrow.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: cs(10);
-    height: cs(10);
+    right: cs(-30);
+    @include arrow($pinkArrow, 270, 15, 15);
     transition: right 0.5s ease;
   }
 
   &:hover {
     &::after {
-      right: cs(-30);
-    }
-  }
-
-  @include tablet {
-    &::after {
-      top: 40%;
-    }
-  }
-
-  @include mobile {
-    &::after {
-      top: 23%;
+      right: cs(-40);
     }
   }
 
@@ -159,7 +143,7 @@
     margin-top: cs(20);
 
     &::after {
-      top: 20%;
+      @include arrow($pinkArrow, 270, 10, 10);
     }
   }
 }
@@ -303,6 +287,12 @@
 .small-button {
   @include fontType(18, 23, semiBold);
   margin-top: cs(15);
+
+  &::after {
+    top: 33%;
+    right: cs(-20);
+    @include arrow($pinkArrow, 270, 10, 10);
+  }
 }
 
 .without-arrow {
