@@ -1,22 +1,22 @@
 class BurgerMenu {
   constructor() {
-    this.burgerButton = document.getElementById('burger-icon');
+    this.burgerButton = document.querySelector('.burger-button');
+    this.burgerMenu = document.querySelector('.burger-menu');
+    this.burgerCross = document.getElementById('burger-cross');
+    this.rootElement = document.querySelector('.root');
   }
 
   init() {
     if (this.burgerButton) {
-      this.burgerButton.addEventListener('click', ({ target }) => {
-        if (target.closest('#burger-icon')) {
-          target.nextElementSibling.classList.add('menu-open');
-        }
+      this.burgerButton.addEventListener('click', () => {
+        console.info('cick', this.burgerMenu.style);
+        this.burgerMenu.firstElementChild.classList.add('menu-open');
+        this.burgerMenu.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
       });
-      if (this.burgerButton.nextElementSibling) {
-        const crossElem = this.burgerButton.nextElementSibling.children[0];
-        crossElem.addEventListener('click', ({ target }) => {
-          if (target.closest('#burger-cross')) {
-            const burgerMenu = target.parentElement.parentElement;
-            burgerMenu.classList.remove('menu-open');
-          }
+      if (this.burgerCross) {
+        this.burgerCross.addEventListener('click', () => {
+          this.burgerMenu.firstElementChild.classList.remove('menu-open');
+          this.burgerMenu.style.backgroundColor = 'rgba(0, 0, 0, 0)';
         });
       }
     }
