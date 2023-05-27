@@ -9,7 +9,6 @@ class BurgerMenu {
   init() {
     if (this.burgerButton) {
       this.burgerButton.addEventListener('click', () => {
-        console.info('cick', this.burgerMenu.style);
         this.burgerMenu.firstElementChild.classList.add('menu-open');
         this.burgerMenu.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
       });

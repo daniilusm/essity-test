@@ -13,7 +13,6 @@ class DropDown {
             if (target.classList.contains('menu-dropdown__title')) {
               target.classList.add('header-dpdwn-open');
             }
-            console.info(target);
           } else {
             target.nextElementSibling.style.display = 'none';
             target.classList.remove('rotate180');
