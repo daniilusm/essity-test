@@ -10,9 +10,16 @@ class DropDown {
           if (target.nextElementSibling.style.display === 'none') {
             target.nextElementSibling.style.display = 'block';
             target.classList.add('rotate180');
+            if (target.classList.contains('menu-dropdown__title')) {
+              target.classList.add('header-dpdwn-open');
+            }
+            console.info(target);
           } else {
             target.nextElementSibling.style.display = 'none';
             target.classList.remove('rotate180');
+            if (target.classList.contains('menu-dropdown__title')) {
+              target.classList.remove('header-dpdwn-open');
+            }
           }
         });
       });
