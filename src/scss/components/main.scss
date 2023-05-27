@@ -206,7 +206,7 @@
     &:hover {
       .more-btn {
         &::after {
-          right: cs(-30);
+          right: cs(-35);
         }
       }
     }
@@ -290,8 +290,8 @@
 
   &::after {
     top: 33%;
-    right: cs(-20);
-    @include arrow($pinkArrow, 270, 10, 10);
+    right: cs(-25);
+    @include arrow($pinkArrow, 270, 15, 10);
   }
 }
 
