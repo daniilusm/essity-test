@@ -62,18 +62,14 @@
 
     &::after {
       content: '';
-      position: absolute;
-      top: 30%;
-      right: cs(-20);
-      @include arrow($blueArrow, 0, 10, 7);
-      transition: all 0.3s ease;
+      @include arrow(30%, -20, $blueArrow, bottom, 10, 7);
     }
 
     &:hover {
       color: $deepCerise;
 
       &::after {
-        @include arrow($pinkArrow, 0, 10, 7);
+        @include arrow(30%, -20, $pinkArrow, bottom, 10, 7);
       }
     }
   }
@@ -123,16 +119,12 @@
 .with-more-items {
   &::after {
     content: '';
-    position: absolute;
-    top: 40%;
-    right: cs(10);
-    @include arrow($greyArrow, 270, 10, 7);
-    transition: all 0.3s ease;
+    @include arrow(40%, 10, $greyArrow, right, 10, 7);
   }
 
   &:hover {
     &::after {
-      @include arrow($darkGreyArrow, 270, 10, 7);
+      @include arrow(40%, 10, $darkGreyArrow, right, 10, 7);
     }
   }
 }
@@ -151,6 +143,6 @@
   color: $deepCerise;
 
   &::after {
-    @include arrow($pinkArrow, 0, 10, 7);
+    @include arrow(30%, -20, $pinkArrow, top, 10, 7);
   }
 }

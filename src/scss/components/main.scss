@@ -125,11 +125,7 @@
 
   &::after {
     content: '';
-    position: absolute;
-    top: 33%;
-    right: cs(-30);
-    @include arrow($pinkArrow, 270, 15, 15);
-    transition: right 0.5s ease;
+    @include arrow(33%, -30, $pinkArrow, right, 15, 15);
   }
 
   &:hover {
@@ -143,7 +139,7 @@
     margin-top: cs(20);
 
     &::after {
-      @include arrow($pinkArrow, 270, 10, 10);
+      @include arrow(33%, -30, $pinkArrow, right, 10, 10);
     }
   }
 }
@@ -289,9 +285,7 @@
   margin-top: cs(15);
 
   &::after {
-    top: 33%;
-    right: cs(-25);
-    @include arrow($pinkArrow, 270, 15, 10);
+    @include arrow(33%, -25, $pinkArrow, right, 15, 10);
   }
 }
 

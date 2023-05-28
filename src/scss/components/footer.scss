@@ -147,11 +147,7 @@
 
     &::after {
       content: '';
-      @include arrow($whiteArrow, 0, 15, 10);
-      position: absolute;
-      top: 30%;
-      right: cs(-30);
-      transition: all 0.3s;
+      @include arrow(30%, -30, $whiteArrow, bottom, 15, 10);
     }
   }
 
