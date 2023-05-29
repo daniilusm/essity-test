@@ -55,6 +55,12 @@
 .menu-dropdown {
   cursor: pointer;
 
+  &:hover {
+    .menu-dropdown__wrapper {
+      display: block;
+    }
+  }
+
   &__title {
     color: $navy;
     @include fontType(16, 22, bold);
@@ -75,12 +81,13 @@
   }
 
   &__wrapper {
+    display: none;
     position: absolute;
     background: #ffffff;
     z-index: 1;
     width: cs(194);
     left: -10%;
-    top: cs(30);
+    top: cs(20);
   }
 
   &__list {
