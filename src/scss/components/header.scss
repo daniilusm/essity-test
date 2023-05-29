@@ -75,7 +75,7 @@
       color: $deepCerise;
 
       &::after {
-        @include arrow(30%, -20, $pinkArrow, bottom, 10, 7);
+        @include arrow(30%, -20, $pinkArrow, top, 10, 7);
       }
     }
   }
