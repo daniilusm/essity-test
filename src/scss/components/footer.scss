@@ -126,7 +126,8 @@
   margin-bottom: cs(-50);
 
   @include tablet {
-    grid-template-columns: repeat(3, cs(225));
+    grid-template-columns: repeat(3, cs(188));
+    grid-gap: cs(40);
   }
 }
 

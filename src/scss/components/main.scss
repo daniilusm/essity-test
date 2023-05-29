@@ -3,15 +3,15 @@
 
 .welcome {
   height: cs(684);
-  background-image: url('../../images/welcome-bg.png');
+  background-image: url('../../images/main-bg.jpg');
   background-size: cover;
+  background-position: 0 75%;
   padding: cs(125) cs(170);
 
   @include tablet {
     height: cs(640);
     padding: cs(160) cs(30);
-    background-image: url('../../images/welcome-bg-tablet.png');
-    background-size: cover;
+    background-position: 75%;
   }
 
   @include mobile {
