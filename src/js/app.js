@@ -24,6 +24,8 @@ import DropDown from './modules/DropDown';
 
 // import AOS from 'aos'
 
+//swiper
+
 import Swiper from 'swiper';
 
 const swiper = new Swiper('.mySwiper', {
