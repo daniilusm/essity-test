@@ -1,0 +1,48 @@
+.about-company {
+  &__item {
+    margin-bottom: cs($desktopMarginBlock);
+  }
+
+  &__page-nav {
+    margin: cs(30) 0 cs(60);
+  }
+
+  &__description {
+    @include fontType(24, 31, medium);
+    width: cs(1043);
+  }
+}
+
+.worth {
+  display: flex;
+  justify-content: space-between;
+
+  &__subtitle {
+    @include arialFont(18, 23);
+    margin-bottom: cs($marginElement);
+  }
+
+  &__left {
+    width: cs(690);
+  }
+
+  &__info-wrapper {
+    margin-bottom: cs($marginElement);
+    width: cs(600);
+  }
+
+  &__info-title {
+    color: $navy;
+    @include fontType(24, 28, medium);
+    margin-bottom: cs(10);
+  }
+
+  &__info-text {
+    @include arialFont(16, 21);
+  }
+
+  &__photo {
+    width: cs(774);
+    height: cs(480);
+  }
+}

@@ -17,12 +17,20 @@ $headerMobileHeight: 90;
 $footerHeight: 720;
 $footerMobileHeight: 882;
 
+$desktopMarginBlock: 100;
+$tabletMarginBlock: 60;
+$mobileMarginBlock: 40;
+$marginElement: 30;
+$marginSmall: 20;
+
 $mainRadius: rem(10);
 
-$whiteColor: #fcfcfc;
-$blackColor: #131313;
-$grayColor: #6f6f6f;
-$redColor: #ff4040;
+$whiteBckg: #ffffff;
+$greyBckg: #fcfcfc;
+
+$whiteColor: #e9ebf6;
+$blackColor: #0e0e0e;
+$greyColor: #808080;
 $navy: #00005a;
 $deepCerise: #e13181;
 $greySuit: #8a8a8d;
@@ -34,7 +42,7 @@ $greyArrow: 'D9D9D9';
 $darkGreyArrow: '808080';
 
 $firstAccentColor: $blackColor;
-$secondAccentColor: $redColor;
+$secondAccentColor: $navy;
 
 $fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
 $fontColor: $blackColor; // Цвет шрифта по умолчанию

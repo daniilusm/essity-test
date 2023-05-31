@@ -1,4 +1,13 @@
 .content {
+  &__item {
+    padding-top: cs(70);
+    padding-bottom: cs($desktopMarginBlock);
+    background: $whiteBckg;
+  }
+}
+
+.greyBg {
+  background: $greyBckg;
 }
 
 .welcome {
@@ -20,22 +29,9 @@
     background-size: cover;
     background-position: right;
   }
-
-  &__title {
-    color: $navy;
-    @include fontType(80, 92, medium);
-
-    @include tablet {
-      @include fontType(60, 69, medium);
-    }
-
-    @include mobile {
-      @include fontType(40, 50, medium);
-    }
-  }
 }
 
-.about-company {
+.about-deskriptions {
   margin-top: cs(87);
 
   @include tablet {
@@ -60,21 +56,6 @@
     @include mobile {
       width: cs(241);
       height: cs(58);
-    }
-  }
-
-  &__title {
-    color: $navy;
-    @include fontType(36, 47, medium);
-    margin-bottom: cs(30);
-
-    @include tablet {
-      @include fontType(32, 42, medium);
-    }
-
-    @include mobile {
-      @include fontType(28, 36, medium);
-      margin-bottom: cs(20);
     }
   }
 
@@ -145,10 +126,10 @@
 }
 
 .partners {
-  margin: cs(100) 0 cs(30);
+  margin: cs($desktopMarginBlock) 0 cs(30);
 
   @include tablet {
-    margin: cs(60) 0 0;
+    margin: cs($tabletMarginBlock) 0 0;
   }
 
   @include mobile {
@@ -183,13 +164,9 @@
 }
 
 .cards {
-  background: $whiteColor;
-  padding-top: cs(70);
-  padding-bottom: cs(100);
-
   @include tablet {
     padding-top: cs(40);
-    padding-bottom: cs(60);
+    padding-bottom: cs($desktopMarginBlock);
   }
 
   @include mobile {
@@ -214,7 +191,8 @@
 
   &__photo {
     width: cs(506);
-    height: cs(250);
+    height: cs(300);
+    object-fit: cover;
 
     @include tablet {
       object-fit: cover;
@@ -228,27 +206,44 @@
   }
 
   &__title {
-    margin-bottom: cs(50);
+    margin-bottom: cs(30);
 
     @include tablet {
       margin-bottom: cs(20);
     }
   }
 
-  &__date {
-    color: $greySuit;
-    margin: cs(20) 0 cs(15);
-    @include fontType(12, 14, regular);
+  &__subtitles-wrapper {
+    margin-bottom: cs($marginElement);
+  }
+
+  &__subtitle {
+    width: cs(774);
+    color: $blackColor;
+    @include fontType(18, 23, medium);
+    @include notLast {
+      margin-bottom: cs(20);
+    }
 
     @include tablet {
-      margin: cs(15) 0;
+      @include fontType(32, 42, medium);
     }
+
+    @include mobile {
+      @include fontType(28, 36, medium);
+    }
+  }
+
+  &__date {
+    color: $greyColor;
+    margin-top: cs(15);
+    @include fontType(12, 14, regular);
   }
 
   &__sub-title {
     color: $navy;
     @include fontType(18, 23, semiBold);
-    margin-bottom: cs(15);
+    margin: cs(15) 0;
 
     @include tablet {
       @include fontType(16, 21, medium);
