@@ -164,15 +164,6 @@
 }
 
 .cards {
-  @include tablet {
-    padding-top: cs(40);
-    padding-bottom: cs($desktopMarginBlock);
-  }
-
-  @include mobile {
-    padding-bottom: 0;
-  }
-
   &__item {
     width: cs(506);
 
@@ -186,22 +177,6 @@
 
     @include tablet {
       width: cs(307);
-    }
-  }
-
-  &__photo {
-    width: cs(506);
-    height: cs(300);
-    object-fit: cover;
-
-    @include tablet {
-      object-fit: cover;
-      width: cs(307);
-      height: cs(200);
-    }
-
-    @include mobile {
-      width: cs(335);
     }
   }
 
@@ -226,11 +201,29 @@
     }
 
     @include tablet {
-      @include fontType(32, 42, medium);
+      width: cs(467);
     }
 
     @include mobile {
       @include fontType(28, 36, medium);
+    }
+  }
+}
+
+.card {
+  &__photo {
+    width: cs(506);
+    height: cs(300);
+    object-fit: cover;
+
+    @include tablet {
+      object-fit: cover;
+      width: cs(307);
+      height: cs(200);
+    }
+
+    @include mobile {
+      width: cs(335);
     }
   }
 

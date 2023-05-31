@@ -1,6 +1,10 @@
 .about-company {
   &__item {
     margin-bottom: cs($desktopMarginBlock);
+
+    @include tablet {
+      margin-bottom: cs($tabletMarginBlock);
+    }
   }
 
   &__page-nav {
@@ -17,6 +21,10 @@
   display: flex;
   justify-content: space-between;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   &__subtitle {
     @include arialFont(18, 23);
     margin-bottom: cs($marginElement);
@@ -24,11 +32,19 @@
 
   &__left {
     width: cs(690);
+
+    @include tablet {
+      width: cs(467);
+    }
   }
 
   &__info-wrapper {
     margin-bottom: cs($marginElement);
     width: cs(600);
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__info-title {
@@ -44,5 +60,11 @@
   &__photo {
     width: cs(774);
     height: cs(480);
+    object-fit: cover;
+
+    @include tablet {
+      width: cs(467);
+      height: cs(416);
+    }
   }
 }

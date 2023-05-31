@@ -17,7 +17,6 @@ body {
 * Например header__container, main__container и т.д.
 */
 [class*='__container'] {
-  margin: 0 auto;
   padding: 0 cs(170);
 
   @include tablet {
@@ -179,6 +178,7 @@ body {
 
   &__link {
     position: relative;
+    @include fontType(14, 18, regular);
     @include notLast {
       margin-right: cs(25);
 
