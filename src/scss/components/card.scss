@@ -1,0 +1,135 @@
+.cards {
+  &__item {
+    width: cs(506);
+
+    &:hover {
+      .more-btn {
+        &::after {
+          right: cs(-35);
+        }
+      }
+    }
+
+    @include tablet {
+      width: cs(307);
+    }
+  }
+
+  &__title {
+    margin-bottom: cs(30);
+
+    @include tablet {
+      margin-bottom: cs(20);
+    }
+  }
+
+  &__subtitles-wrapper {
+    margin-bottom: cs($marginElement);
+  }
+
+  &__subtitle {
+    width: cs(774);
+    color: $blackColor;
+    @include fontType(18, 23, medium);
+    @include notLast {
+      margin-bottom: cs(20);
+    }
+
+    @include tablet {
+      width: cs(467);
+    }
+
+    @include mobile {
+      @include fontType(28, 36, medium);
+    }
+  }
+}
+
+.card {
+  &__photo {
+    width: cs(506);
+    height: cs(300);
+    object-fit: cover;
+
+    @include tablet {
+      object-fit: cover;
+      width: cs(307);
+      height: cs(200);
+    }
+
+    @include mobile {
+      width: cs(335);
+    }
+  }
+
+  &__date {
+    color: $greyColor;
+    margin-top: cs(15);
+    @include fontType(12, 14, regular);
+  }
+
+  &__sub-title {
+    color: $navy;
+    @include fontType(18, 23, semiBold);
+    margin: cs(15) 0;
+
+    @include tablet {
+      @include fontType(16, 21, medium);
+    }
+  }
+
+  &__text {
+    @include fontType(16, 21, medium);
+
+    @include tablet {
+      @include fontType(14, 18, medium);
+      height: cs(56);
+      overflow: hidden;
+    }
+  }
+}
+
+.mySwiper {
+  padding-bottom: cs(100) !important;
+
+  @include mobile {
+    padding-bottom: cs(35) !important;
+  }
+}
+
+.more-btn {
+  @include fontType(24, 31, bold);
+  margin-top: cs(30);
+  background: none;
+  color: $deepCerise;
+  position: relative;
+
+  &::after {
+    content: '';
+    @include arrow(33%, -30, $pinkArrow, right, 15, 15);
+  }
+
+  &:hover {
+    &::after {
+      right: cs(-40);
+    }
+  }
+
+  @include mobile {
+    @include fontType(18, 23, bold);
+    margin-top: cs(20);
+
+    &::after {
+      @include arrow(33%, -30, $pinkArrow, right, 10, 10);
+    }
+  }
+}
+
+.small-button {
+  @include fontType(18, 23, semiBold);
+  margin-top: cs(15);
+
+  &::after {
+    @include arrow(33%, -25, $pinkArrow, right, 15, 10);
+  }
+}
