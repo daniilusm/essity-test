@@ -19,10 +19,13 @@
     @include fontType(24, 31, medium);
     width: cs(1043);
 
+    @include tablet {
+      margin-top: cs(40);
+    }
+
     @include mobile {
       @include fontType(20, 26, medium);
       width: 96%;
-      margin-top: cs(40);
     }
   }
 }
