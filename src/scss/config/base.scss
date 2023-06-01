@@ -36,7 +36,7 @@ body {
   }
 
   @include mobile {
-    margin-bottom: cs($tabletMarginBlock);
+    margin-bottom: cs($mobileMarginBlock);
   }
 }
 // Стили отзывчивых картинок (IBG) ============================================
@@ -130,6 +130,13 @@ body {
     @include tablet {
       @include fontType(22, 29, medium);
       max-width: 100%;
+    }
+
+    @include mobile {
+      @include fontType(20, 26, medium);
+      @include notFirst {
+        margin-top: cs(20);
+      }
     }
   }
 }

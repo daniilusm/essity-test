@@ -6,11 +6,19 @@
     margin-bottom: cs(50);
   }
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   &__content {
     max-width: cs(774);
 
     @include tablet {
       max-width: cs(467);
+    }
+
+    @include mobile {
+      margin-bottom: cs($mobileMarginBlock);
     }
   }
 
@@ -27,6 +35,10 @@
 
   &__button {
     width: cs(123);
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__photo {
@@ -38,11 +50,20 @@
       width: cs(467);
       height: auto;
     }
+
+    @include mobile {
+      width: cs(340);
+      height: cs(340);
+    }
   }
 }
 
 .content-with-photo-revers {
   flex-direction: row-reverse;
+
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .grid-gallery {
@@ -70,6 +91,11 @@
     @include tablet {
       width: cs(308);
       height: cs(205);
+    }
+
+    @include mobile {
+      width: cs(340);
+      height: cs(215);
     }
   }
 }
