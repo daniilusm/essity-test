@@ -1,8 +1,15 @@
 .content {
   &__item {
-    padding-top: cs(70);
-    padding-bottom: cs($desktopMarginBlock);
+    padding: cs(70) cs(170) cs($desktopMarginBlock);
     background: $whiteBckg;
+
+    @include tablet {
+      padding: cs(60) cs(32) cs($tabletMarginBlock);
+    }
+
+    @include mobile {
+      padding: 0 cs(25) cs($mobileMarginBlock);
+    }
   }
 }
 
