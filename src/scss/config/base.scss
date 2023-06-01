@@ -17,14 +17,26 @@ body {
 * Например header__container, main__container и т.д.
 */
 [class*='__container'] {
-  padding: 0 cs(170);
+  padding: 0 cs($desktopContainer);
 
   @include tablet {
-    padding: 0 cs(32);
+    padding: 0 cs($tabletContainer);
   }
 
   @include mobile {
-    padding: 0 cs(25);
+    padding: 0 cs($mobileContainer);
+  }
+}
+
+[class*='__block'] {
+  margin-bottom: cs($desktopMarginBlock);
+
+  @include tablet {
+    margin-bottom: cs($tabletMarginBlock);
+  }
+
+  @include mobile {
+    margin-bottom: cs($tabletMarginBlock);
   }
 }
 // Стили отзывчивых картинок (IBG) ============================================
@@ -96,6 +108,29 @@ body {
 
   &_start {
     padding-top: rem($headerHeight);
+  }
+}
+
+.page-heading {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    max-width: 100%;
+  }
+
+  &__description {
+    @include fontType(24, 31, medium);
+    max-width: 75%;
+    @include notFirst {
+      margin-top: cs(30);
+    }
+
+    @include tablet {
+      @include fontType(22, 29, medium);
+      max-width: 100%;
+    }
   }
 }
 

@@ -1,0 +1,75 @@
+.content-with-photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include notLast {
+    margin-bottom: cs(50);
+  }
+
+  &__content {
+    max-width: cs(774);
+
+    @include tablet {
+      max-width: cs(467);
+    }
+  }
+
+  &__text-wrapper {
+    margin-bottom: cs(30);
+  }
+
+  &__text {
+    @include arialFont(18, 23);
+    @include notLast {
+      margin-bottom: cs(20);
+    }
+  }
+
+  &__button {
+    width: cs(123);
+  }
+
+  &__photo {
+    object-fit: cover;
+    width: cs(774);
+    height: cs(480);
+
+    @include tablet {
+      width: cs(467);
+      height: auto;
+    }
+  }
+}
+
+.content-with-photo-revers {
+  flex-direction: row-reverse;
+}
+
+.grid-gallery {
+  width: 100%;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    @include notLast {
+      margin-bottom: cs(30);
+    }
+
+    @include tablet {
+      @include notLast {
+        margin-bottom: cs(20);
+      }
+    }
+  }
+
+  &__photo {
+    object-fit: cover;
+    width: cs(372);
+    height: cs(250);
+
+    @include tablet {
+      width: cs(308);
+      height: cs(205);
+    }
+  }
+}

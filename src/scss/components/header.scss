@@ -24,6 +24,11 @@
   display: flex;
   align-items: center;
 
+  &__button {
+    margin-left: cs(105);
+    width: cs(180);
+  }
+
   &__list {
     display: flex;
   }
@@ -34,21 +39,19 @@
       margin-right: cs(60);
     }
   }
+}
 
-  &__button {
-    margin-left: cs(105);
-    @include fontType(16, 22, bold);
-    color: $deepCerise;
-    background-color: $whiteBckg;
-    width: cs(180);
-    height: cs(46);
-    border: 2px solid $deepCerise;
-    transition: all 0.3s ease-in-out;
+.pink-button {
+  @include fontType(16, 22, bold);
+  color: $deepCerise;
+  background-color: $whiteBckg;
+  height: cs(46);
+  border: 2px solid $deepCerise;
+  transition: all 0.3s ease-in-out;
 
-    &:hover {
-      color: $whiteColor;
-      background-color: $deepCerise;
-    }
+  &:hover {
+    color: $whiteColor;
+    background-color: $deepCerise;
   }
 }
 
