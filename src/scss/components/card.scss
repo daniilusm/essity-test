@@ -40,7 +40,8 @@
     }
 
     @include mobile {
-      @include fontType(28, 36, medium);
+      width: auto;
+      @include fontType(16, 21, medium);
     }
   }
 }
