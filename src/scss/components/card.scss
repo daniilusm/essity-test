@@ -3,7 +3,7 @@
     width: cs(506);
 
     &:hover {
-      .more-btn {
+      .text-btn {
         &::after {
           right: cs(-35);
         }
@@ -98,7 +98,7 @@
   }
 }
 
-.more-btn {
+.text-btn {
   @include fontType(24, 31, bold);
   margin-top: cs(30);
   background: none;

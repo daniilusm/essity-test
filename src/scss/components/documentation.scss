@@ -1,0 +1,109 @@
+.documentaion-page {
+  margin-bottom: cs(60);
+
+  &__cities {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}
+
+.documentaion-city {
+  &__item {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: cs(462);
+    height: cs(82);
+    padding-bottom: cs(20);
+    border-bottom: 1px solid $lineColor;
+    margin-bottom: cs(15);
+
+    &:hover {
+      .text-btn {
+        &::after {
+          right: cs(-35);
+        }
+      }
+    }
+
+    @include tablet {
+      width: cs(308);
+      height: auto;
+      flex-direction: column;
+      padding-bottom: cs(15);
+    }
+  }
+}
+
+.document-item {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__text {
+    @include fontType(24, 31, regular);
+
+    @include tablet {
+      @include fontType(18, 23, regular);
+    }
+
+    @include tablet {
+      @include fontType(16, 21, regular);
+    }
+  }
+
+  //   &__name {
+  //     @include fontType(24, 31, regular);
+
+  //     @include tablet {
+  //       @include fontType(18, 23, regular);
+  //     }
+
+  //     @include tablet {
+  //       @include fontType(16, 21, regular);
+  //     }
+  //   }
+
+  //   &__date {
+  //     @include fontType(24, 31, regular);
+
+  //     @include tablet {
+  //       @include fontType(18, 23, regular);
+  //     }
+
+  //     @include tablet {
+  //       @include fontType(16, 21, regular);
+  //     }
+  //   }
+
+  &__button {
+    margin: 0;
+
+    @include tablet {
+      margin-top: cs(5);
+      @include fontType(18, 23, bold);
+
+      &::after {
+        top: 20%;
+      }
+    }
+
+    @include mobile {
+      @include fontType(18, 23, bold);
+
+      &::after {
+        top: 33%;
+      }
+    }
+  }
+}
