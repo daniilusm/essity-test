@@ -84,6 +84,7 @@
   }
 
   &__photo {
+    cursor: pointer;
     object-fit: cover;
     width: cs(372);
     height: cs(250);

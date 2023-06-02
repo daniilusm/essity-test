@@ -26,11 +26,19 @@ import DropDown from './modules/DropDown';
 
 //swiper
 
-import Swiper from 'swiper';
+// import Swiper from 'swiper';
 
-const swiper = new Swiper('.mySwiper', {
-  spaceBetween: 30,
-});
+// const swiper = new Swiper('.mySwiper', {
+//   spaceBetween: 30,
+// });
+
+// const gallerySwiper = new Swiper('.gallerySwiper', {
+//   spaceBetween: 30,
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });
 
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML
  ! (i) необходимо для корректного отображения webp из css
@@ -68,6 +76,6 @@ new DropDown().init();
  * На обертку(враппер) окна добавь класс _overlay-bg
  * На кнопку для закрытия окна добавь класс button-close
  */
-// togglePopupWindows();
+togglePopupWindows();
 
 // const tabs = new Tabs('default-tabs', {});

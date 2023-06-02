@@ -177,16 +177,32 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  bottom: cs(35) !important;
+  bottom: 45% !important;
   top: auto !important;
-  width: cs(50) !important;
-  height: cs(50) !important;
-  background-color: #00005a;
-  border-radius: 50%;
+  width: cs(60) !important;
+  height: cs(60) !important;
+
+  @include tablet {
+    width: cs(40) !important;
+    height: cs(40) !important;
+  }
+
+  @include mobile {
+    width: cs(20) !important;
+    height: cs(20) !important;
+  }
 
   &::after {
-    font-size: 12px !important;
     color: white;
+    font-size: cs(60) !important;
+
+    @include tablet {
+      font-size: cs(40) !important;
+    }
+
+    @include mobile {
+      font-size: cs(20) !important;
+    }
   }
 }
 .swiper-button-next {
