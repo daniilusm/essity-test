@@ -1,0 +1,41 @@
+.activity-page {
+  &__welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: cs(684);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57)),
+      url('../../images/activity/company.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 70%;
+  }
+
+  &__welcome-content {
+    width: cs(1380);
+    padding-bottom: cs(70);
+  }
+
+  &__breadcrumbs {
+    padding-top: cs(50);
+    margin: 0;
+
+    .breadcrumbs__link {
+      color: $whiteColor;
+
+      &::after {
+        @include arrow(35%, -20, 'e9ebf6', right, 10, 7);
+      }
+    }
+  }
+
+  &__page-title {
+    color: $whiteColor;
+  }
+
+  &__page-description {
+    margin-top: cs(50);
+    color: $whiteColor;
+    @include fontType(24, 31, medium);
+  }
+}
