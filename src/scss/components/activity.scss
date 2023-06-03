@@ -9,16 +9,38 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 70%;
+
+    @include tablet {
+      height: cs(640);
+    }
+
+    @include mobile {
+      height: cs(593);
+      background-position-x: 25%;
+    }
   }
 
   &__welcome-content {
     width: cs(1380);
     padding-bottom: cs(70);
+
+    @include tablet {
+      width: auto;
+      padding-bottom: cs(40);
+    }
+
+    @include mobile {
+      padding-bottom: cs(30);
+    }
   }
 
   &__breadcrumbs {
     padding-top: cs(50);
     margin: 0;
+
+    @include mobile {
+      padding-top: cs(30);
+    }
 
     .breadcrumbs__link {
       color: $whiteColor;
@@ -37,5 +59,16 @@
     margin-top: cs(50);
     color: $whiteColor;
     @include fontType(24, 31, medium);
+
+    @include mobile {
+      margin-top: cs(20);
+      @include fontType(20, 26, medium);
+    }
+  }
+}
+
+.image-right {
+  @include mobile {
+    object-position: right;
   }
 }

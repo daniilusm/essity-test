@@ -18,7 +18,7 @@
     }
 
     @include mobile {
-      margin-bottom: cs($mobileMarginBlock);
+      margin-bottom: 0;
     }
   }
 
@@ -38,6 +38,7 @@
 
     @include mobile {
       width: 100%;
+      margin-top: cs(40);
     }
   }
 
