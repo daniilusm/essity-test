@@ -113,7 +113,7 @@ body {
 }
 
 .page-heading {
-  max-width: 90%;
+  max-width: 98%;
   display: flex;
   flex-direction: column;
 
@@ -217,6 +217,8 @@ body {
 }
 
 .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
   margin: cs(50) 0;
 
   @include mobile {

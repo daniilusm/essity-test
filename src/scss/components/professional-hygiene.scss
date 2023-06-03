@@ -1,0 +1,58 @@
+.offers {
+  &__page-title {
+    @include mobile {
+      @include fontType(35, 44, medium);
+    }
+  }
+
+  &__image {
+    height: cs(400);
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: cs(50);
+
+    @include tablet {
+      height: cs(298);
+    }
+
+    @include mobile {
+      margin-bottom: cs(40);
+      height: cs(456);
+    }
+  }
+
+  &__text-btn {
+    @include tablet {
+      @include fontType(18, 23, bold);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    width: cs(774);
+
+    @include tablet {
+      width: cs(467);
+    }
+
+    @include mobile {
+      width: 100%;
+      @include notLast {
+        margin-bottom: cs(40);
+      }
+    }
+  }
+}
+
+.offers-categories {
+  display: flex;
+  justify-content: space-between;
+}
