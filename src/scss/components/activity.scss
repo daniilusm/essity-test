@@ -5,10 +5,7 @@
     justify-content: space-between;
     height: cs(684);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57)),
-      url('../../images/activity/company.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 70%;
+      url('../../images/activity/company.png') no-repeat center 70% / cover;
 
     @include tablet {
       height: cs(640);
