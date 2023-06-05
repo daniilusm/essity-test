@@ -1,4 +1,6 @@
 .gallery-popup {
+  display: flex;
+  align-items: center;
   padding: cs(100) cs($desktopContainer);
 
   @include mobile {

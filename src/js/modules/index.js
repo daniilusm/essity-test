@@ -16,8 +16,6 @@ function isWebp() {
   testWebp((support) => {
     const className = support ? 'webp' : 'no-webp';
     html.classList.add(className);
-
-    console.log(support ? 'webp поддерживается' : 'webp не поддерживается');
   });
 }
 

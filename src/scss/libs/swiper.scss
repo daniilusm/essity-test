@@ -190,6 +190,7 @@
   @include mobile {
     width: cs(20) !important;
     height: cs(20) !important;
+    top: 70% !important;
   }
 
   &::after {
