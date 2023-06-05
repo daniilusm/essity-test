@@ -181,6 +181,7 @@
   top: auto !important;
   width: cs(60) !important;
   height: cs(60) !important;
+  pointer-events: all !important;
 
   @include tablet {
     width: cs(40) !important;

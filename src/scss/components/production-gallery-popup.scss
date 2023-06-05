@@ -7,6 +7,13 @@
     padding: 65% cs($mobileContainer);
   }
 
+  &__background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+  }
+
   &__cross {
     cursor: pointer;
     position: absolute;
