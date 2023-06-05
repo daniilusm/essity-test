@@ -9,13 +9,15 @@ class BurgerMenu {
   init() {
     if (this.burgerButton) {
       this.burgerButton.addEventListener('click', () => {
-        this.burgerMenu.firstElementChild.classList.add('menu-open');
+        this.burgerMenu.children[0].classList.add('menu-open');
         this.burgerMenu.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        this.rootElement.style.pointerEvents = 'none';
       });
       if (this.burgerCross) {
         this.burgerCross.addEventListener('click', () => {
-          this.burgerMenu.firstElementChild.classList.remove('menu-open');
+          this.burgerMenu.children[0].classList.remove('menu-open');
           this.burgerMenu.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+          this.rootElement.style.pointerEvents = 'all';
         });
       }
     }
