@@ -1,4 +1,12 @@
 .offers {
+  &__page-heading {
+    margin-bottom: cs(50);
+
+    @include mobile {
+      margin-bottom: cs(40);
+    }
+  }
+
   &__page-title {
     @include mobile {
       @include fontType(35, 44, medium);
