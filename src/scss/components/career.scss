@@ -1,6 +1,10 @@
 .career-page {
   &__button {
     width: cs(305);
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__stories-wrapper {
@@ -20,6 +24,7 @@
 
     @include tablet {
       @include arialFont(16, 21);
+      font-style: italic;
       margin-top: cs(15);
     }
   }
