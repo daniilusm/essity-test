@@ -13,6 +13,7 @@ import {
   togglePopupWindows,
   addTouchClass,
   addLoadedClass,
+  fixedNavPage,
 } from './modules';
 
 import BurgerMenu from './modules/BurgerMenu';
@@ -77,5 +78,6 @@ new DropDown().init();
  * На кнопку для закрытия окна добавь класс button-close
  */
 togglePopupWindows();
+fixedNavPage();
 
 // const tabs = new Tabs('default-tabs', {});

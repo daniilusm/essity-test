@@ -71,6 +71,44 @@ function headerFixed() {
   }
 }
 
+const fixedNavPage = () => {
+  const root = document.querySelector('.fixed-navigation');
+  const section = document.querySelectorAll('.section');
+  const lists = document.querySelectorAll('.fixed-navigation__link');
+
+  function activeLink(li) {
+    lists.forEach((item) => item.classList.remove('active-nav-link'));
+    li.classList.add('active-nav-link');
+  }
+  lists.forEach((item) =>
+    item.addEventListener('click', function () {
+      activeLink(this);
+    })
+  );
+
+  window.onscroll = () => {
+    if (window.scrollY > 70) {
+      root.style.opacity = 1;
+      root.style.pointerEvents = 'all';
+    }
+    if (window.scrollY < 70) {
+      root.style.opacity = 0;
+      root.style.pointerEvents = 'none';
+    }
+    section.forEach((sec) => {
+      const top = window.scrollY;
+      const offset = sec.offsetTop;
+      const height = sec.offsetHeight;
+      const id = sec.getAttribute('id');
+
+      if (top >= offset && top < offset + height) {
+        const target = document.querySelector(`[href='#${id}']`);
+        activeLink(target);
+      }
+    });
+  };
+};
+
 // Универсальная функция для открытия и закрытия попапов ==================================================
 const togglePopupWindows = () => {
   document.addEventListener('click', ({ target }) => {
@@ -110,4 +148,5 @@ export {
   addLoadedClass,
   getHash,
   setHash,
+  fixedNavPage,
 };

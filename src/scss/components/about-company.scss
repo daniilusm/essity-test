@@ -30,6 +30,36 @@
   }
 }
 
+.fixed-navigation {
+  opacity: 0;
+  position: fixed;
+  pointer-events: none;
+  left: 27%;
+  bottom: cs(50);
+  width: cs(813);
+  padding: cs(18) cs(30);
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: opacity 0.5s;
+
+  @include tablet {
+    left: 10%;
+    bottom: cs(40);
+  }
+
+  @include media(1023) {
+    display: none;
+  }
+
+  &__link {
+    color: $blackColor;
+  }
+}
+
+.active-nav-link {
+  color: $deepCerise;
+  border-bottom: 1px solid $deepCerise;
+}
+
 .worth {
   display: flex;
   justify-content: space-between;
