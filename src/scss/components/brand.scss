@@ -1,0 +1,151 @@
+.brand-page {
+  &__welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: cs(610);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+      url('../../images/hands2.jpeg') no-repeat center 60% / cover;
+
+    @include tablet {
+      height: cs(640);
+    }
+
+    @include mobile {
+      height: cs(390);
+      background-position-x: 55%;
+    }
+  }
+
+  &__welcome-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: cs(70);
+
+    @include tablet {
+      width: auto;
+      padding-bottom: cs(40);
+    }
+
+    @include mobile {
+      padding-bottom: cs(30);
+    }
+  }
+
+  &__heading {
+    width: cs(1080);
+    @include tablet {
+      width: cs(654);
+    }
+    @include mobile {
+      width: auto;
+    }
+  }
+
+  &__logo {
+    width: cs(165);
+    height: cs(90);
+  }
+
+  &__breadcrumbs {
+    padding: cs(50) cs(170) 0;
+    margin: 0;
+
+    @include tablet {
+      padding: cs(40) cs(32) 0;
+    }
+
+    @include mobile {
+      padding: cs(30) cs(25) 0;
+    }
+
+    .breadcrumbs__link {
+      color: $whiteColor;
+
+      &::after {
+        @include arrow(35%, -20, 'e9ebf6', right, 10, 7);
+      }
+    }
+  }
+
+  &__card-btn {
+    margin: 0;
+  }
+
+  &__sub-title {
+    margin: cs(20) 0 cs(10);
+  }
+
+  &__content-text {
+    margin: 0;
+    @include fontType(24, 31, medium);
+
+    @include tablet {
+      @include fontType(22, 29, medium);
+    }
+
+    @include mobile {
+      @include fontType(20, 26, medium);
+    }
+  }
+
+  &__content-btn {
+    margin-top: cs(10);
+
+    @include mobile {
+      margin-bottom: cs(30);
+
+      &::after {
+        width: cs(15);
+        height: cs(10);
+      }
+    }
+  }
+
+  &__page-title {
+    color: $whiteColor;
+    @include mobile {
+      @include fontType(32, 41, medium);
+    }
+  }
+
+  &__page-description {
+    margin-bottom: cs(16);
+    color: $whiteColor;
+    @include fontType(14, 18, regular);
+
+    @include mobile {
+      margin-top: cs(20);
+      @include fontType(12, 16, medium);
+    }
+  }
+}
+
+.brand-social {
+  &__wrapper {
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    padding: cs(30);
+    display: flex;
+    align-items: center;
+    border: 1px solid $lineColor;
+  }
+
+  &__ok {
+    width: cs(260);
+    height: cs(55);
+  }
+
+  &__vk {
+    width: cs(265);
+    height: cs(45);
+  }
+}
