@@ -1,0 +1,32 @@
+.career-page {
+  &__button {
+    width: cs(305);
+  }
+
+  &__stories-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card-photo {
+    object-position: 0 18%;
+  }
+
+  &__quote {
+    color: $greyColor;
+    @include arialFont(24, 31);
+    font-style: italic;
+    margin-top: cs(20);
+  }
+
+  &__sub-title {
+    @include fontType(22, 23, semiBold);
+    margin: cs(20) 0 0;
+  }
+
+  &__student-name {
+    color: $greyColor;
+    @include arialFont(18, 23);
+    margin: cs(10) 0 cs(20);
+  }
+}
