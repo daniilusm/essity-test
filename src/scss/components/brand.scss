@@ -3,17 +3,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: cs(684);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.57)),
-      url('../../images/hands2.jpeg') no-repeat center 50% / cover;
+    height: cs(610);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+      url('../../images/hands2.jpeg') no-repeat center 60% / cover;
 
     @include tablet {
       height: cs(640);
     }
 
     @include mobile {
-      height: cs(593);
-      background-position-x: 25%;
+      height: cs(390);
+      background-position-x: 55%;
     }
   }
 
@@ -36,6 +36,12 @@
 
   &__heading {
     width: cs(1080);
+    @include tablet {
+      width: cs(654);
+    }
+    @include mobile {
+      width: auto;
+    }
   }
 
   &__logo {
@@ -75,10 +81,34 @@
   &__content-text {
     margin: 0;
     @include fontType(24, 31, medium);
+
+    @include tablet {
+      @include fontType(22, 29, medium);
+    }
+
+    @include mobile {
+      @include fontType(20, 26, medium);
+    }
+  }
+
+  &__content-btn {
+    margin-top: cs(10);
+
+    @include mobile {
+      margin-bottom: cs(30);
+
+      &::after {
+        width: cs(15);
+        height: cs(10);
+      }
+    }
   }
 
   &__page-title {
     color: $whiteColor;
+    @include mobile {
+      @include fontType(32, 41, medium);
+    }
   }
 
   &__page-description {
@@ -88,7 +118,7 @@
 
     @include mobile {
       margin-top: cs(20);
-      @include fontType(20, 26, medium);
+      @include fontType(12, 16, medium);
     }
   }
 }
@@ -96,6 +126,10 @@
 .brand-social {
   &__wrapper {
     display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__link {
