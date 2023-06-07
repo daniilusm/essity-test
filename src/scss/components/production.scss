@@ -6,6 +6,12 @@
     margin-bottom: cs(50);
   }
 
+  @include tablet {
+    @include notLast {
+      margin-bottom: cs(30);
+    }
+  }
+
   @include mobile {
     flex-direction: column;
   }
