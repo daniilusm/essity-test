@@ -1,0 +1,31 @@
+.news-page {
+  &__card {
+    width: cs(513);
+
+    &:hover {
+      .text-btn {
+        &::after {
+          right: cs(-35);
+        }
+      }
+    }
+
+    @include tablet {
+      width: cs(307);
+    }
+  }
+}
+
+.news-card {
+  &__sub-title {
+    @include fontType(22, 23, semiBold);
+
+    @include tablet {
+      @include fontType(16, 21, semiBold);
+    }
+  }
+
+  &__text {
+    @include fontType(14, 18, medium);
+  }
+}
