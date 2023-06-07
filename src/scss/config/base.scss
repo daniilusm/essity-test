@@ -121,16 +121,22 @@ body {
     max-width: 100%;
   }
 
+  &__sub-title {
+    color: $navy;
+    @include fontType(36, 47 medium);
+    margin: cs(50) 0 cs(20);
+  }
+
   &__description {
     @include fontType(24, 31, medium);
-    max-width: 75%;
+    width: cs(1045);
     @include notFirst {
       margin-top: cs(30);
     }
 
     @include tablet {
       @include fontType(22, 29, medium);
-      max-width: 100%;
+      width: 100%;
     }
 
     @include mobile {

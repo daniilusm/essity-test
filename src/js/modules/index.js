@@ -85,28 +85,29 @@ const fixedNavPage = () => {
       activeLink(this);
     })
   );
-
-  window.onscroll = () => {
-    if (window.scrollY > 70) {
-      root.style.opacity = 1;
-      root.style.pointerEvents = 'all';
-    }
-    if (window.scrollY < 70) {
-      root.style.opacity = 0;
-      root.style.pointerEvents = 'none';
-    }
-    section.forEach((sec) => {
-      const top = window.scrollY;
-      const offset = sec.offsetTop;
-      const height = sec.offsetHeight;
-      const id = sec.getAttribute('id');
-
-      if (top >= offset && top < offset + height) {
-        const target = document.querySelector(`[href='#${id}']`);
-        activeLink(target);
+  if (root) {
+    window.onscroll = () => {
+      if (window.scrollY > 70) {
+        root.style.opacity = 1;
+        root.style.pointerEvents = 'all';
       }
-    });
-  };
+      if (window.scrollY < 70) {
+        root.style.opacity = 0;
+        root.style.pointerEvents = 'none';
+      }
+      section.forEach((sec) => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+          const target = document.querySelector(`[href='#${id}']`);
+          activeLink(target);
+        }
+      });
+    };
+  }
 };
 
 // Универсальная функция для открытия и закрытия попапов ==================================================
