@@ -1,4 +1,10 @@
 .news-page {
+  &__wrapper {
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
   &__card {
     width: cs(513);
 
@@ -12,6 +18,12 @@
 
     @include tablet {
       width: cs(307);
+    }
+    @include mobile {
+      @include notLast {
+        margin-bottom: cs(30);
+      }
+      width: cs(335);
     }
   }
 }
