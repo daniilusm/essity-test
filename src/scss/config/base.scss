@@ -123,8 +123,18 @@ body {
 
   &__sub-title {
     color: $navy;
-    @include fontType(36, 47 medium);
+    @include fontType(36, 47, medium);
     margin: cs(50) 0 cs(20);
+
+    @include tablet {
+      @include fontType(32, 42, medium);
+      margin: cs(80) 0 cs(10);
+    }
+
+    @include mobile {
+      @include fontType(28, 36, medium);
+      margin: cs(40) 0 0;
+    }
   }
 
   &__description {
