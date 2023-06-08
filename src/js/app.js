@@ -19,7 +19,7 @@ import {
 import BurgerMenu from './modules/BurgerMenu';
 import DropDown from './modules/DropDown';
 
-// import Tabs from 'modules/Tabs';
+import Tabs from './modules/Tabs';
 
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -80,4 +80,4 @@ new DropDown().init();
 togglePopupWindows();
 fixedNavPage();
 
-// const tabs = new Tabs('default-tabs', {});
+const tabs = new Tabs('stories-page', {});

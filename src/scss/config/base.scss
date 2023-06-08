@@ -269,6 +269,7 @@ body {
     border-bottom: 1px solid transparent;
     padding-bottom: cs(5);
     transition: all 0.3s;
+    cursor: pointer;
 
     @include notLast {
       margin-right: cs(40);
@@ -279,4 +280,12 @@ body {
       border-bottom: 1px solid $deepCerise;
     }
   }
+}
+
+.active-panel {
+  display: block !important;
+}
+
+.tabs__panel {
+  display: none;
 }
