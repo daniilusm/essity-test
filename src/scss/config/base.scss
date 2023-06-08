@@ -262,6 +262,21 @@ body {
 }
 
 .page-navigation {
+  display: flex;
+  flex-direction: row;
+
+  @include mobile {
+    width: 120%;
+  }
+
+  &__wrapper {
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   &__link {
     color: $greyColor;
     @include fontType(20, 26, medium);
@@ -270,6 +285,10 @@ body {
     padding-bottom: cs(5);
     transition: all 0.3s;
     cursor: pointer;
+
+    @include mobile {
+      @include fontType(16, 21, medium);
+    }
 
     @include notLast {
       margin-right: cs(40);
