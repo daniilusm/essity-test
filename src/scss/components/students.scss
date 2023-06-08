@@ -1,5 +1,11 @@
 .students-page {
   &__photo {
     height: auto;
+
+    @include tablet {
+      height: cs(366);
+      position: sticky;
+      top: cs(30);
+    }
   }
 }
