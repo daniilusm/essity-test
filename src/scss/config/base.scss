@@ -238,9 +238,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: cs(50) 0;
+  width: max-content;
 
   @include mobile {
     margin: cs(20) 0;
+  }
+
+  &__container {
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__link {
