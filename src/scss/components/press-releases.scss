@@ -5,6 +5,10 @@
 
   &__contacts {
     margin-top: cs(5);
+
+    @include tablet {
+      display: none;
+    }
   }
 }
 
@@ -15,12 +19,22 @@
   &__content {
     display: flex;
     flex-direction: row;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__years {
     display: flex;
     flex-direction: column;
     margin-right: cs(60);
+
+    @include tablet {
+      flex-direction: row;
+      margin-right: 0;
+      justify-content: flex-end;
+    }
   }
 
   &__year-btn {
@@ -34,6 +48,13 @@
 
     &:hover {
       color: $navy;
+    }
+
+    @include tablet {
+      @include notLast {
+        margin-bottom: 0;
+        margin-right: cs(20);
+      }
     }
   }
 }
@@ -54,6 +75,12 @@
     }
   }
 
+  @include tablet {
+    @include notLast {
+      margin-bottom: cs(40);
+    }
+  }
+
   &__date {
     color: $greyColor;
     @include arialFont(12, 14);
@@ -68,6 +95,10 @@
     color: $navy;
     @include fontType(36, 47, medium);
     margin-bottom: cs(10);
+
+    @include tablet {
+      @include fontType(32, 42, medium);
+    }
   }
 
   &__description {
