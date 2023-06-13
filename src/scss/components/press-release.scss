@@ -107,6 +107,11 @@
     }
   }
 
+  &__small-title {
+    @include fontType(22, 24, semiBold);
+    margin-bottom: cs(20);
+  }
+
   &__author-name {
     color: $navy;
     @include fontType(18, 19, medium);

@@ -2,6 +2,10 @@
   &__page-title {
     margin-bottom: cs(95);
   }
+
+  &__contacts {
+    margin-top: cs(5);
+  }
 }
 
 .press-releases {
@@ -63,7 +67,7 @@
   &__title {
     color: $navy;
     @include fontType(36, 47, medium);
-    margin-bottom: cs(15);
+    margin-bottom: cs(10);
   }
 
   &__description {
