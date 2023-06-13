@@ -1,0 +1,42 @@
+.awards {
+  padding-top: cs(34);
+  padding-bottom: cs(100);
+  background-color: $greyBckg;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left-path {
+  }
+
+  &__right-path {
+  }
+
+  &__description {
+    margin-bottom: cs(30);
+    @include arialFont(18, 23);
+  }
+}
+
+.awards-list {
+  &__item {
+    @include arialFont(18, 23);
+    @include notLast {
+      margin-bottom: cs(20);
+    }
+
+    margin-left: cs(20);
+    width: cs(757);
+    &::before {
+      content: '\2022';
+      color: $deepCerise;
+      font-weight: bold;
+      font-size: cs(20);
+      display: inline-block;
+      width: cs(15);
+      margin-left: cs(-20);
+    }
+  }
+}
