@@ -61,6 +61,10 @@
     color: $whiteColor;
     @include fontType(24, 31, medium);
 
+    @include tablet {
+      @include fontType(22, 29, medium);
+    }
+
     @include mobile {
       margin-top: cs(20);
       @include fontType(20, 26, medium);

@@ -24,14 +24,17 @@
       width: auto;
       padding-bottom: cs(40);
     }
+
+    @include mobile {
+      padding-bottom: cs(30);
+    }
   }
 
   &__page-description {
     margin-top: cs(30);
 
-    @include tablet {
-      @include fontType(22, 29, medium);
-      width: auto;
+    @include mobile {
+      margin-top: cs(20);
     }
   }
 
@@ -39,11 +42,19 @@
     @include tablet {
       margin-bottom: cs(20);
     }
+
+    @include mobile {
+      margin-bottom: cs(15);
+    }
   }
 
   &__content-photo {
     @include tablet {
       height: cs(400);
+    }
+
+    @include mobile {
+      height: cs(300);
     }
   }
 }
@@ -60,6 +71,10 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__left-path {
@@ -67,6 +82,11 @@
 
     @include tablet {
       width: cs(467);
+    }
+
+    @include mobile {
+      width: auto;
+      margin-bottom: cs(20);
     }
   }
 
@@ -76,11 +96,19 @@
     @include tablet {
       width: cs(450);
     }
+
+    @include mobile {
+      width: auto;
+    }
   }
 
   &__description {
     margin-bottom: cs(15);
     @include arialFont(18, 23);
+
+    @include mobile {
+      @include arialFont(16, 21);
+    }
   }
 }
 
@@ -100,6 +128,10 @@
       display: inline-block;
       width: cs(15);
       margin-left: cs(-20);
+    }
+
+    @include mobile {
+      @include arialFont(16, 21);
     }
   }
 }
