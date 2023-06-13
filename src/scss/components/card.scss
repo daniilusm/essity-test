@@ -86,6 +86,9 @@
       @include fontType(14, 18, medium);
       height: cs(56);
       overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
     }
   }
 }

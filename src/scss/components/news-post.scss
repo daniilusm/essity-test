@@ -153,6 +153,11 @@
     margin-bottom: cs(30);
     color: $blackColor;
     @include arialFont(15, 19.5);
+    max-height: cs(80);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
 
     @include tablet {
       margin-bottom: cs(20);

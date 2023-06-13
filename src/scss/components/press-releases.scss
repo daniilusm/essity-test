@@ -1,3 +1,9 @@
+.press-releases-page {
+  &__page-title {
+    margin-bottom: cs(95);
+  }
+}
+
 .press-releases {
   display: flex;
   justify-content: space-between;
@@ -62,5 +68,10 @@
 
   &__description {
     @include arialFont(18, 23);
+    max-height: cs(70);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 }
