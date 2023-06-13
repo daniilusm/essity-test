@@ -1,0 +1,162 @@
+.news-post {
+  &__breadcrumbs {
+    margin-bottom: cs(35);
+  }
+
+  &__page {
+    display: flex;
+    justify-content: space-between;
+    margin-top: cs(66);
+    margin-bottom: cs(84);
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      margin-top: cs(80);
+      margin-bottom: cs(60);
+    }
+
+    @include mobile {
+      margin-top: cs(40);
+      margin-bottom: cs(40);
+    }
+  }
+
+  &__content {
+    width: cs(1042);
+
+    @include tablet {
+      width: cs(636);
+    }
+
+    @include mobile {
+      width: auto;
+    }
+  }
+
+  &__date {
+    margin-bottom: cs(15);
+    color: $greyColor;
+    @include arialFont(16, 20.8);
+
+    @include tablet {
+      @include arialFont(12, 13.8);
+    }
+
+    @include mobile {
+      margin-bottom: cs(15);
+    }
+  }
+
+  &__text {
+    margin-bottom: cs(14);
+    @include arialFont(18, 23);
+
+    @include mobile {
+      @include arialFont(16, 20);
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: cs(1043);
+    height: cs(509);
+    overflow: hidden;
+    margin-top: cs(50);
+    margin-bottom: cs(46);
+
+    @include tablet {
+      width: cs(636);
+      height: cs(374);
+      margin-top: cs(10);
+      margin-bottom: cs(30);
+    }
+
+    @include mobile {
+      width: cs(340);
+      height: cs(340);
+    }
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      object-position: 50% 0%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__similar {
+    width: cs(355);
+
+    @include tablet {
+      width: cs(308);
+    }
+  }
+}
+.similar {
+  &__main-title {
+    color: $navy;
+    margin-bottom: cs(30);
+    @include fontType(28, 36, medium);
+
+    @include tablet {
+      margin-bottom: cs(25);
+      @include fontType(24, 28, medium);
+    }
+
+    @include mobile {
+      @include fontType(20, 26, medium);
+    }
+  }
+
+  &__page {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      min-width: cs(1200);
+      width: 100%;
+      overflow: auto;
+    }
+  }
+
+  &__post {
+    @include mobile {
+      width: cs(340);
+    }
+  }
+
+  &__date {
+    margin-bottom: cs(15);
+    color: $greyColor;
+    @include arialFont(12, 15.6);
+
+    @include tablet {
+      margin-bottom: cs(10);
+      @include arialFont(12, 13.8);
+    }
+  }
+
+  &__title {
+    margin-bottom: cs(15);
+    color: $navy;
+    @include fontType(18, 18.9);
+
+    @include tablet {
+      margin-bottom: cs(10);
+      @include fontType(16, 20.8);
+    }
+  }
+
+  &__text {
+    margin-bottom: cs(30);
+    color: $blackColor;
+    @include arialFont(15, 19.5);
+
+    @include tablet {
+      margin-bottom: cs(20);
+      @include arialFont(14, 18.2);
+    }
+  }
+}
