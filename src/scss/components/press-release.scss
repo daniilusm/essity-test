@@ -2,27 +2,50 @@
   &__page-title {
     margin-bottom: cs(25);
     width: 96%;
+
+    @include tablet {
+      margin-bottom: cs(45);
+    }
   }
 }
 
 .press-release {
   width: cs(870);
 
+  @include tablet {
+    width: auto;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__date {
     color: $greyColor;
     @include arialFont(16, 21);
     margin-bottom: cs(20);
+
+    @include tablet {
+      @include arialFont(12, 14);
+      margin-bottom: cs(10);
+    }
   }
 
   &__text {
     @include arialFont(18, 23);
     @include notLast {
       margin-bottom: cs(20);
+    }
+
+    @include tablet {
+      @include notLast {
+        margin-bottom: cs(23);
+      }
     }
   }
 
@@ -31,15 +54,29 @@
     background: none;
     color: $deepCerise;
     @include fontType(24, 31, bold);
+
+    @include tablet {
+      margin-top: cs(25);
+      @include fontType(20, 26, bold);
+    }
   }
 }
 
 .contacts {
   margin-top: cs(20);
+
+  @include tablet {
+    margin-top: cs(60);
+  }
+
   &__title {
     color: $navy;
     @include fontType(28, 36, semiBold);
     margin-bottom: cs(30);
+
+    @include tablet {
+      @include fontType(24, 28, semiBold);
+    }
   }
 
   &__author-name {
