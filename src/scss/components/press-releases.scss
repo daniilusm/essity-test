@@ -1,13 +1,25 @@
 .press-releases-page {
   &__page-title {
     margin-bottom: cs(95);
+
+    @include tablet {
+      margin-bottom: cs(10);
+    }
   }
 
   &__contacts {
     margin-top: cs(5);
+    position: sticky;
+    top: cs(50);
+    height: max-content;
 
     @include tablet {
-      display: none;
+      position: fixed;
+      top: 85%;
+      background-color: white;
+      padding: cs(15);
+      border-radius: 5%;
+      border: 1px solid $lineColor;
     }
   }
 }
@@ -25,10 +37,18 @@
     }
   }
 
+  &__list-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__years {
     display: flex;
     flex-direction: column;
     margin-right: cs(60);
+    position: sticky;
+    top: cs(50);
+    height: max-content;
 
     @include tablet {
       flex-direction: row;
@@ -63,9 +83,7 @@
   display: block;
   width: cs(927);
   cursor: pointer;
-  @include notLast {
-    margin-bottom: cs(50);
-  }
+  margin-bottom: cs(50);
 
   &:hover {
     .text-btn {
@@ -76,9 +94,7 @@
   }
 
   @include tablet {
-    @include notLast {
-      margin-bottom: cs(40);
-    }
+    margin-bottom: cs(40);
   }
 
   &__date {
@@ -109,4 +125,8 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
   }
+}
+
+.current-year-link {
+  color: $navy;
 }

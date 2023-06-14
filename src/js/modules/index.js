@@ -72,28 +72,31 @@ function headerFixed() {
 }
 
 const fixedNavPage = () => {
-  const root = document.querySelector('.fixed-navigation');
+  const root = document.querySelector('.fixed-block');
   const section = document.querySelectorAll('.section');
-  const lists = document.querySelectorAll('.fixed-navigation__link');
+  const lists = document.querySelectorAll('.fixed-block__link');
 
-  function activeLink(li) {
-    lists.forEach((item) => item.classList.remove('active-nav-link'));
-    li.classList.add('active-nav-link');
+  function activeLink(li, isYears) {
+    const currentClass = isYears ? 'current-year-link' : 'active-nav-link';
+    lists.forEach((item) => item.classList.remove(currentClass));
+    li.classList.add(currentClass);
   }
   lists.forEach((item) =>
     item.addEventListener('click', function () {
-      activeLink(this);
+      activeLink(this, this.classList.contains('press-releases__year-btn'));
     })
   );
   if (root) {
     window.onscroll = () => {
-      if (window.scrollY > 70) {
-        root.style.opacity = 1;
-        root.style.pointerEvents = 'all';
-      }
-      if (window.scrollY < 70) {
-        root.style.opacity = 0;
-        root.style.pointerEvents = 'none';
+      if (!root.classList.contains('press-releases__years')) {
+        if (window.scrollY > 70) {
+          root.style.opacity = 1;
+          root.style.pointerEvents = 'all';
+        }
+        if (window.scrollY < 70) {
+          root.style.opacity = 0;
+          root.style.pointerEvents = 'none';
+        }
       }
       section.forEach((sec) => {
         const top = window.scrollY;
@@ -103,7 +106,7 @@ const fixedNavPage = () => {
 
         if (top >= offset && top < offset + height) {
           const target = document.querySelector(`[href='#${id}']`);
-          activeLink(target);
+          activeLink(target, root.classList.contains('press-releases__years'));
         }
       });
     };

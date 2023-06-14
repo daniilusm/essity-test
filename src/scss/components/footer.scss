@@ -3,6 +3,7 @@
   padding-bottom: cs(50);
   background: $navy;
   height: cs($footerHeight);
+  z-index: 10;
 
   @include mobile {
     height: cs($footerMobileHeight);

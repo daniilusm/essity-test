@@ -69,6 +69,9 @@
     background: none;
     color: $deepCerise;
     @include fontType(24, 31, bold);
+    &:hover {
+      text-decoration: underline;
+    }
 
     @include tablet {
       margin-top: cs(25);
