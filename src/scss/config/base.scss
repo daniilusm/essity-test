@@ -295,7 +295,7 @@ body {
     position: relative;
     border-bottom: 1px solid transparent;
     padding-bottom: cs(5);
-    transition: all 0.3s;
+    transition: color 0.3s, border-bottom 0.3s;
     cursor: pointer;
 
     @include mobile {

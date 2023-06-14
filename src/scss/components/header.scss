@@ -47,7 +47,7 @@
   background-color: $whiteBckg;
   height: cs(46);
   border: 2px solid $deepCerise;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
   &:hover {
     color: $whiteColor;
@@ -67,7 +67,7 @@
   &__title {
     color: $navy;
     @include fontType(16, 22, bold);
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 
     &::after {
       content: '';
@@ -102,7 +102,7 @@
   &__item {
     position: relative;
     padding: cs(14);
-    transition: all 0.3s;
+    transition: background-color 0.3s;
     @include fontType(16, 18, regular);
 
     &:hover {
