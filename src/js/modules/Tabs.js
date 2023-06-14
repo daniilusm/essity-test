@@ -31,7 +31,7 @@ class Tabs {
     this.tabs = document.querySelector(`[data-tabs="${selector}"]`);
 
     if (!this.tabs) {
-      console.error(this.errors.selectorNotExist);
+      // console.error(this.errors.selectorNotExist);
       return;
     }
 
@@ -51,11 +51,11 @@ class Tabs {
    */
   #check() {
     if (this.isTabsUnique()) {
-      console.error(this.errors.duplicateTabs);
+      // console.error(this.errors.duplicateTabs);
     }
 
     if (this.triggers.length !== this.panels.length) {
-      console.error(this.errors.mismatch);
+      // console.error(this.errors.mismatch);
     }
   }
 

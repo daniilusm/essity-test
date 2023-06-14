@@ -16,7 +16,6 @@ class BurgerMenu {
         this.burgerMenu.style.pointerEvents = 'all';
       });
       this.burgerMenu.addEventListener('click', (event) => {
-        console.info(event.target);
         if (event.target.classList.contains('burger-menu__left')) {
           this.burgerMenu.children[1].classList.remove('menu-open');
           this.burgerMenu.style.backgroundColor = 'rgba(0, 0, 0, 0)';
