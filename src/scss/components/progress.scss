@@ -68,6 +68,10 @@
     padding-bottom: cs(55);
   }
 
+  @include mobile {
+    padding-bottom: cs(55);
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
