@@ -135,6 +135,24 @@
       margin-top: cs(8);
     }
   }
+
+  &__modal-btn {
+    background: none;
+    color: $navy;
+    align-self: flex-end;
+    margin-top: cs(-35);
+    @include fontType(22, 24, medium);
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include mobile {
+      @include fontType(20, 26, medium);
+      margin-top: 0;
+      align-self: flex-start;
+    }
+  }
 }
 
 .author-contacts {

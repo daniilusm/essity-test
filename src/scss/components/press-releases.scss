@@ -30,6 +30,33 @@
       top: 75%;
     }
   }
+
+  &__popup-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__popup {
+    position: relative;
+    margin: 0 auto;
+    width: max-content;
+    background-color: white;
+    padding: cs(20) cs(150) cs(20) cs(20);
+    z-index: 10;
+
+    @include mobile {
+      padding: cs(20) cs(100) cs(20) cs(20);
+    }
+  }
+
+  &__cross {
+    cursor: pointer;
+    position: absolute;
+    width: cs(20);
+    height: cs(20);
+    top: cs(10);
+    right: cs(10);
+  }
 }
 
 .press-releases {
@@ -48,6 +75,14 @@
   &__list-wrapper {
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      margin-top: cs(60);
+    }
+
+    @include mobile {
+      margin-top: cs(30);
+    }
   }
 
   &__years {
@@ -57,16 +92,20 @@
     position: sticky;
     top: cs(50);
     height: max-content;
+    width: max-content;
 
     @include tablet {
+      background-color: rgba(255, 255, 255, 0.75);
       flex-direction: row;
       margin-right: 0;
       justify-content: flex-end;
+      padding: cs(10);
+      margin-left: cs(-10);
     }
 
     @include mobile {
       justify-content: flex-start;
-      margin-bottom: cs(40);
+      margin-bottom: cs(20);
     }
   }
 
