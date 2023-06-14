@@ -97,27 +97,35 @@
 
   &__title {
     color: $navy;
-    @include fontType(28, 36, semiBold);
+    @include fontType(28, 36, medium);
     margin-bottom: cs(30);
 
     @include tablet {
-      @include fontType(24, 28, semiBold);
+      @include fontType(24, 28, medium);
     }
 
     @include mobile {
-      @include fontType(20, 26, semiBold);
+      @include fontType(20, 26, medium);
       margin-bottom: cs(20);
     }
   }
 
   &__small-title {
-    @include fontType(22, 24, semiBold);
+    @include fontType(22, 24, medium);
     margin-bottom: cs(20);
+
+    @include mobile {
+      @include fontType(20, 26, medium);
+    }
   }
 
   &__author-name {
     color: $navy;
     @include fontType(18, 19, medium);
+
+    @include mobile {
+      @include fontType(16, 17, medium);
+    }
   }
 
   &__author-contacts {

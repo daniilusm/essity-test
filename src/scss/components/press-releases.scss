@@ -5,6 +5,10 @@
     @include tablet {
       margin-bottom: cs(10);
     }
+
+    @include mobile {
+      margin-bottom: cs(15);
+    }
   }
 
   &__contacts {
@@ -20,6 +24,10 @@
       padding: cs(15);
       border-radius: 5%;
       border: 1px solid $lineColor;
+    }
+
+    @include mobile {
+      top: 75%;
     }
   }
 }
@@ -55,6 +63,11 @@
       margin-right: 0;
       justify-content: flex-end;
     }
+
+    @include mobile {
+      justify-content: flex-start;
+      margin-bottom: cs(40);
+    }
   }
 
   &__year-btn {
@@ -73,7 +86,15 @@
     @include tablet {
       @include notLast {
         margin-bottom: 0;
-        margin-right: cs(20);
+        margin-right: cs(30);
+      }
+    }
+
+    @include mobile {
+      @include fontType(16, 21, medium);
+      @include notLast {
+        margin-bottom: 0;
+        margin-right: cs(30);
       }
     }
   }
@@ -97,6 +118,10 @@
     margin-bottom: cs(40);
   }
 
+  @include mobile {
+    width: 100%;
+  }
+
   &__date {
     color: $greyColor;
     @include arialFont(12, 14);
@@ -115,6 +140,10 @@
     @include tablet {
       @include fontType(32, 42, medium);
     }
+
+    @include mobile {
+      @include fontType(28, 36, medium);
+    }
   }
 
   &__description {
@@ -124,6 +153,12 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+
+    @include mobile {
+      @include arialFont(16, 21);
+      max-height: cs(100);
+      -webkit-line-clamp: 4;
+    }
   }
 }
 
