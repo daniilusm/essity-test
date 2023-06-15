@@ -1,15 +1,15 @@
-$maxWidth: 1920; // максимальная ширина страницы
-$minWidth: 320; // минимальная ширина телефона
-$maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
-$containerWidth: 1160; // ширина контейнера из макета$baseScreenSize: 1920;
+$maxWidth: 1920;
+$minWidth: 320;
+$maxWidthContainer: 1200;
+$containerWidth: 1160;
 
 $baseScreenSize: 1280;
 $tabletScreenSize: 1024;
 $mobileScreenSize: 550;
 
-$mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: 'Manrope'; // !указать здесь основное семейство шрифта
-$mainWeight: 400; // !указать здесь основное начертание шрифта
+$mainOffset: 15;
+$mainFont: 'Manrope';
+$mainWeight: 400;
 
 $headerHeight: 70;
 $headerTabletHeight: 60;
@@ -49,10 +49,10 @@ $darkGreyArrow: '808080';
 $firstAccentColor: $blackColor;
 $secondAccentColor: $navy;
 
-$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
-$fontColor: $blackColor; // Цвет шрифта по умолчанию
-$fontSize: 16; // Размер шрифта по умолчанию
-$fontWeight: $mainWeight; // Жирность шрифта по умолчанию
+$fontFamily: $mainFont, sans-serif;
+$fontColor: $blackColor;
+$fontSize: 16;
+$fontWeight: $mainWeight;
 
 $standartTrans: all 280ms ease-in-out 0ms;
 
