@@ -38,6 +38,7 @@
     @include notLast {
       margin-right: cs(60);
     }
+    padding: cs(24) 0;
   }
 }
 
@@ -71,14 +72,14 @@
 
     &::after {
       content: '';
-      @include arrow(30%, -20, $blueArrow, bottom, 10, 7);
+      @include arrow(45%, -20, $blueArrow, bottom, 10, 7);
     }
 
     &:hover {
       color: $deepCerise;
 
       &::after {
-        @include arrow(30%, -20, $pinkArrow, top, 10, 7);
+        @include arrow(45%, -20, $pinkArrow, top, 10, 7);
       }
     }
   }
@@ -90,7 +91,7 @@
     z-index: 1;
     width: cs(285);
     left: -10%;
-    top: cs(20);
+    top: cs($headerHeight);
   }
 
   &__list {

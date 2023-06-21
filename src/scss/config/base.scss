@@ -248,7 +248,7 @@ body {
     position: relative;
     @include fontType(14, 18, regular);
     @include notLast {
-      margin-right: cs(25);
+      margin-right: cs(30);
 
       &::after {
         content: '';
