@@ -187,6 +187,10 @@ body {
   color: $navy;
   @include fontType(80, 92, medium);
 
+  span {
+    color: $navy;
+  }
+
   @include tablet {
     @include fontType(60, 69, medium);
   }
