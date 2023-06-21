@@ -1,5 +1,24 @@
 import toggleBodyLock from '../helpers/toggleBodyLock';
 import { html } from '../helpers/elementsNodeList';
+import Swiper, { Navigation } from 'swiper';
+
+const gallerySwiper = new Swiper('.gallerySwiper', {
+  modules: [Navigation],
+  observer: true,
+  observeParents: true,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiper = new Swiper('.mySwiper', {
+  spaceBetween: 30,
+});
+
+swiper.init();
+gallerySwiper.init();
 
 function isWebp() {
   const testWebp = (callback) => {
@@ -64,6 +83,10 @@ const togglePopupWindows = () => {
       const popup = document.querySelector(
         `[data-popup="${target.dataset.type}"]`
       );
+
+      if (target.dataset.type === 'production-gallery') {
+        gallerySwiper.slideTo(target.dataset.slide);
+      }
 
       if (document.querySelector('._is-open')) {
         document.querySelectorAll('._is-open').forEach((modal) => {
