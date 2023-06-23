@@ -127,7 +127,7 @@
 
   &::after {
     content: '';
-    @include arrow(33%, left, 145, $pinkArrow, right, 15, 15);
+    @include arrow(33%, left, 145, $pinkArrow, right, 13, 13);
   }
 
   &:hover {
@@ -151,6 +151,6 @@
   margin-top: cs(15);
 
   &::after {
-    @include arrow(40%, left, 115, $pinkArrow, right, 12, 7);
+    @include arrow(35%, left, 115, $pinkArrow, right, 12, 7);
   }
 }
