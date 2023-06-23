@@ -19,6 +19,10 @@
           right: cs(-35);
         }
       }
+
+      img {
+        transform: scale(1.2);
+      }
     }
 
     @include tablet {

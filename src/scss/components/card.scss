@@ -8,6 +8,10 @@
           right: cs(-35);
         }
       }
+
+      img {
+        transform: scale(1.2);
+      }
     }
 
     @include tablet {
@@ -47,10 +51,10 @@
 }
 
 .card {
-  &__photo {
+  &__photo-wrapper {
+    overflow: hidden;
     width: cs(506);
     height: cs(300);
-    object-fit: cover;
 
     @include tablet {
       object-fit: cover;
@@ -60,6 +64,17 @@
 
     @include mobile {
       width: cs(335);
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+
+    @include tablet {
+      object-fit: cover;
     }
   }
 
