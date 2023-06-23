@@ -5,7 +5,7 @@
     &:hover {
       .text-btn {
         &::after {
-          right: cs(-35);
+          left: cs(130);
         }
       }
 
@@ -118,6 +118,8 @@
 
 .text-btn {
   @include fontType(24, 31, bold);
+  width: 100%;
+  text-align: start;
   margin-top: cs(30);
   background: none;
   color: $deepCerise;
@@ -125,12 +127,12 @@
 
   &::after {
     content: '';
-    @include arrow(33%, -30, $pinkArrow, right, 15, 15);
+    @include arrow(33%, 115, $pinkArrow, right, 15, 15);
   }
 
   &:hover {
     &::after {
-      right: cs(-40);
+      left: cs(125);
     }
   }
 
@@ -139,7 +141,7 @@
     margin-top: cs(20);
 
     &::after {
-      @include arrow(33%, -30, $pinkArrow, right, 10, 10);
+      @include arrow(33%, 115, $pinkArrow, right, 10, 10);
     }
   }
 }
@@ -149,6 +151,6 @@
   margin-top: cs(15);
 
   &::after {
-    @include arrow(33%, -25, $pinkArrow, right, 15, 10);
+    @include arrow(33%, 115, $pinkArrow, right, 12, 7);
   }
 }
