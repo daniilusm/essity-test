@@ -112,7 +112,7 @@ body {
 
   &__sub-title {
     color: $navy;
-    @include fontType(36, 47, medium);
+    @include fontType(36, 43, medium);
     margin: cs(50) 0 cs(20);
     width: cs(775);
 
@@ -202,7 +202,7 @@ body {
 
 .section-title {
   color: $navy;
-  @include fontType(36, 47, medium);
+  @include fontType(36, 43, medium);
   margin-bottom: cs(30);
 
   @include tablet {
@@ -247,17 +247,20 @@ body {
   &__link {
     position: relative;
     @include fontType(14, 18, regular);
+    border-bottom: 1px solid transparent;
+    transition: color 0.1s ease;
+    padding-bottom: cs(3);
     @include notLast {
       margin-right: cs(30);
-
       &::after {
         content: '';
-        @include arrow(35%, -20, '0E0E0E', right, 10, 7);
+        @include arrow(35%, right, -20, '0E0E0E', right, 10, 7);
       }
     }
 
     &:hover {
-      text-decoration: underline;
+      color: $deepCerise;
+      border-bottom: 1px solid $deepCerise;
     }
 
     @include mobile {

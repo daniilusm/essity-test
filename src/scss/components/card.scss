@@ -127,12 +127,12 @@
 
   &::after {
     content: '';
-    @include arrow(33%, 115, $pinkArrow, right, 15, 15);
+    @include arrow(33%, left, 145, $pinkArrow, right, 15, 15);
   }
 
   &:hover {
     &::after {
-      left: cs(125);
+      left: cs(155);
     }
   }
 
@@ -141,7 +141,7 @@
     margin-top: cs(20);
 
     &::after {
-      @include arrow(33%, 115, $pinkArrow, right, 10, 10);
+      @include arrow(33%, left, 115, $pinkArrow, right, 10, 10);
     }
   }
 }
@@ -151,6 +151,6 @@
   margin-top: cs(15);
 
   &::after {
-    @include arrow(33%, 115, $pinkArrow, right, 12, 7);
+    @include arrow(40%, left, 115, $pinkArrow, right, 12, 7);
   }
 }

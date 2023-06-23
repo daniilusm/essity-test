@@ -105,7 +105,7 @@
 }
 
 .partners-logo {
-  margin: cs($desktopMarginBlock) 0 cs(30);
+  margin: cs($desktopMarginBlock) 0 0;
 
   @include tablet {
     margin: cs($tabletMarginBlock) 0 0;

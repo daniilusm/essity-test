@@ -175,7 +175,7 @@
 
   &__title {
     color: $navy;
-    @include fontType(36, 47, medium);
+    @include fontType(36, 43, medium);
     margin-bottom: cs(10);
 
     @include tablet {

@@ -30,8 +30,29 @@
   }
 
   &__text-btn {
+    &::after {
+      left: cs(240);
+    }
+
+    &:hover {
+      &::after {
+        left: cs(250);
+      }
+    }
+
     @include tablet {
       @include fontType(18, 23, bold);
+      &::after {
+        left: cs(180);
+        top: 20%;
+        width: cs(10);
+      }
+
+      &:hover {
+        &::after {
+          left: cs(190);
+        }
+      }
     }
   }
 

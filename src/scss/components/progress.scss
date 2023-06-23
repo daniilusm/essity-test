@@ -11,7 +11,7 @@
       color: $whiteColor;
 
       &::after {
-        @include arrow(35%, -20, 'e9ebf6', right, 10, 7);
+        @include arrow(35%, right, -20, 'e9ebf6', right, 10, 7);
       }
     }
   }
@@ -60,7 +60,7 @@
 }
 
 .awards {
-  padding-top: cs(34);
+  padding-top: cs(50);
   padding-bottom: cs(100);
   background-color: $greyBckg;
 
