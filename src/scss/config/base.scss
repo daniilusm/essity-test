@@ -263,8 +263,21 @@ body {
       border-bottom: 1px solid $deepCerise;
     }
 
+    @include tablet {
+      @include notLast {
+        &::after {
+          @include arrow(30%, right, -20, '0E0E0E', right, 10, 7);
+        }
+      }
+    }
+
     @include mobile {
       @include fontType(12, 16, regular);
+      @include notLast {
+        &::after {
+          @include arrow(25%, right, -20, '0E0E0E', right, 10, 7);
+        }
+      }
     }
   }
 }
