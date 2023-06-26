@@ -87,7 +87,14 @@
       @include fontType(18, 23, semiBold);
 
       &::after {
-        top: 20%;
+        top: 40%;
+      }
+    }
+    @include mobile {
+      @include fontType(18, 23, semiBold);
+
+      &::after {
+        top: 30%;
       }
     }
   }

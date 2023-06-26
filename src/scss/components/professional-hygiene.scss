@@ -44,7 +44,7 @@
       @include fontType(18, 23, bold);
       &::after {
         left: cs(180);
-        top: 20%;
+        top: 25%;
         width: cs(10);
       }
 
@@ -52,6 +52,12 @@
         &::after {
           left: cs(190);
         }
+      }
+    }
+
+    @include mobile {
+      &::after {
+        top: 30%;
       }
     }
   }
