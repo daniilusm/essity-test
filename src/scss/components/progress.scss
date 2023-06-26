@@ -13,6 +13,18 @@
       &::after {
         @include arrow(35%, right, -20, 'e9ebf6', right, 10, 7);
       }
+
+      @include tablet {
+        &::after {
+          @include arrow(30%, right, -20, 'e9ebf6', right, 10, 7);
+        }
+      }
+
+      @include mobile {
+        &::after {
+          @include arrow(25%, right, -20, 'e9ebf6', right, 10, 7);
+        }
+      }
     }
   }
 
