@@ -6,7 +6,7 @@
   z-index: 10;
 
   @include mobile {
-    height: cs($footerMobileHeight);
+    height: auto;
     padding-top: cs(35);
   }
 
