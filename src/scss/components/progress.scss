@@ -65,10 +65,12 @@
   background-color: $greyBckg;
 
   @include tablet {
+    padding-top: cs(50);
     padding-bottom: cs(55);
   }
 
   @include mobile {
+    padding-top: cs(50);
     padding-bottom: cs(55);
   }
 

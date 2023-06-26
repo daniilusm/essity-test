@@ -8,7 +8,7 @@
     }
 
     @include mobile {
-      padding: 0 cs(25) cs($mobileMarginBlock);
+      padding: cs(30) cs(25) cs($mobileMarginBlock);
     }
   }
 }
