@@ -2,6 +2,10 @@
   &__breadcrumbs {
     padding: cs(50) cs(170) 0;
 
+    @include desktop {
+      padding: cs(50) cs(90) 0;
+    }
+
     @include tablet {
       padding: cs(40) cs(32) 0;
     }

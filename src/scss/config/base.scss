@@ -6,7 +6,11 @@ body {
 }
 
 [class*='__container'] {
-  padding: 0 cs($desktopContainer);
+  padding: 0 cs($bigDesktopContainer);
+
+  @include desktop {
+    padding: 0 cs($desktopContainer);
+  }
 
   @include tablet {
     padding: 0 cs($tabletContainer);

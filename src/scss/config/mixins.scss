@@ -228,6 +228,25 @@
   }
 }
 
+@mixin fixFontType($font-size, $line-height, $font-type: regular) {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-size: #{$font-size}px;
+  line-height: #{$line-height}px;
+  @if $font-type==bold {
+    font-weight: 700;
+  }
+  @if $font-type==semiBold {
+    font-weight: 600;
+  }
+  @if $font-type==medium {
+    font-weight: 500;
+  }
+  @if $font-type==regular {
+    font-weight: 400;
+  }
+}
+
 @mixin arialFont($font-size, $line-height) {
   font-family: 'Arial', sans-serif;
   font-style: normal;

@@ -3,6 +3,10 @@
     padding: cs(70) cs(170) cs($desktopMarginBlock);
     background: $whiteBckg;
 
+    @include desktop {
+      padding: cs(70) cs(90) cs($desktopMarginBlock);
+    }
+
     @include tablet {
       padding: cs(60) cs(32) cs($tabletMarginBlock);
     }
@@ -23,6 +27,10 @@
   background-size: cover;
   background-position: 0 75%;
   padding: cs(125) cs(170);
+
+  @include desktop {
+    padding: cs(125) cs(90);
+  }
 
   @include tablet {
     height: cs(640);

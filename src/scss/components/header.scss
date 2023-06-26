@@ -8,6 +8,10 @@
     align-items: center;
     justify-content: space-between;
 
+    @include desktop {
+      padding: 0 cs(90);
+    }
+
     @include tablet {
       padding: 0 cs(30);
       height: cs($headerTabletHeight);

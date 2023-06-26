@@ -86,7 +86,7 @@
 
   &__sub-title {
     color: $navy;
-    @include fontType(18, 23, semiBold);
+    @include fixFontType(18, 23, semiBold);
     margin: cs(15) 0;
 
     @include tablet {
@@ -95,7 +95,7 @@
   }
 
   &__text {
-    @include fontType(16, 21, medium);
+    @include fixFontType(16, 21, medium);
 
     @include tablet {
       @include fontType(14, 18, medium);
