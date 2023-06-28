@@ -1,10 +1,14 @@
 .stories-page {
   &__page-heading {
-    margin-bottom: cs(60);
+    margin-bottom: vw(60);
+
+    @include tablet {
+      margin-bottom: cs(60);
+    }
   }
 
   &__tabs {
-    margin: cs(20) 0 cs(60);
+    margin: vw(20) 0 vw(60);
 
     @include tablet {
       margin: 0 0 cs(40);

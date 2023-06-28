@@ -1,6 +1,6 @@
 .press-releases-page {
   &__page-title {
-    margin-bottom: cs(95);
+    margin-bottom: vw(95);
 
     @include tablet {
       margin-bottom: cs(10);
@@ -12,12 +12,13 @@
   }
 
   &__contacts {
-    margin-top: cs(5);
+    margin-top: vw(5);
     position: sticky;
-    top: cs(50);
+    top: vw(50);
     height: max-content;
 
     @include tablet {
+      margin-top: cs(5);
       position: fixed;
       top: 85%;
       background-color: white;
@@ -41,8 +42,12 @@
     margin: 0 auto;
     width: max-content;
     background-color: white;
-    padding: cs(20) cs(150) cs(20) cs(20);
+    padding: vw(20) vw(150) vw(20) vw(20);
     z-index: 10;
+
+    @include tablet {
+      padding: cs(20) cs(150) cs(20) cs(20);
+    }
 
     @include mobile {
       padding: cs(20) cs(100) cs(20) cs(20);
@@ -88,9 +93,9 @@
   &__years {
     display: flex;
     flex-direction: column;
-    margin-right: cs(60);
+    margin-right: vw(60);
     position: sticky;
-    top: cs(50);
+    top: vw(50);
     height: max-content;
     width: max-content;
 
@@ -116,7 +121,7 @@
     color: $greyColor;
     @include fontType(22, 29, semiBold);
     @include notLast {
-      margin-bottom: cs(15);
+      margin-bottom: vw(15);
     }
     transition: color 0.3s;
 
@@ -143,9 +148,9 @@
 
 .press-release-item {
   display: block;
-  width: cs(927);
+  width: vw(927);
   cursor: pointer;
-  margin-bottom: cs(50);
+  margin-bottom: vw(50);
 
   &:hover {
     .text-btn {
@@ -156,7 +161,16 @@
   }
 
   @include tablet {
+    width: cs(927);
     margin-bottom: cs(40);
+
+    &:hover {
+      .text-btn {
+        &::after {
+          left: cs(125);
+        }
+      }
+    }
   }
 
   @include mobile {
@@ -166,7 +180,7 @@
   &__date {
     color: $greyColor;
     @include arialFont(12, 14);
-    margin-bottom: cs(15);
+    margin-bottom: vw(15);
 
     @include tablet {
       margin-bottom: cs(10);
@@ -176,10 +190,11 @@
   &__title {
     color: $navy;
     @include fontType(36, 43, medium);
-    margin-bottom: cs(10);
+    margin-bottom: vw(10);
 
     @include tablet {
       @include fontType(32, 42, medium);
+      margin-bottom: cs(10);
     }
 
     @include mobile {
@@ -189,11 +204,15 @@
 
   &__description {
     @include arialFont(18, 23);
-    max-height: cs(70);
+    max-height: vw(70);
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+
+    @include tablet {
+      max-height: cs(70);
+    }
 
     @include mobile {
       @include arialFont(16, 21);

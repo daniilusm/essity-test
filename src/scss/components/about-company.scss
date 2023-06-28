@@ -1,6 +1,6 @@
 .about-company {
   &__item {
-    margin-bottom: cs($desktopMarginBlock);
+    margin-bottom: vw($desktopMarginBlock);
 
     @include tablet {
       margin-bottom: cs($tabletMarginBlock);
@@ -12,14 +12,18 @@
   }
 
   &__page-nav {
-    margin: cs(30) 0 cs(60);
+    margin: vw(30) 0 vw(60);
+    @include tablet {
+      margin: cs(30) 0 cs(60);
+    }
   }
 
   &__description {
     @include fontType(24, 31, medium);
-    width: cs(1043);
+    width: vw(1043);
 
     @include tablet {
+      width: cs(1043);
       margin-top: cs(40);
     }
 
@@ -35,15 +39,17 @@
   position: fixed;
   pointer-events: none;
   left: 27%;
-  bottom: cs(50);
-  width: cs(813);
-  padding: cs(18) cs(30);
+  bottom: vw(50);
+  width: vw(813);
+  padding: vw(18) vw(30);
   background-color: rgba(255, 255, 255, 0.75);
   transition: opacity 0.5s;
 
   @include tablet {
     left: 10%;
     bottom: cs(40);
+    width: cs(813);
+    padding: cs(18) cs(30);
   }
 
   @include media(1023) {
@@ -78,7 +84,7 @@
   }
 
   &__left {
-    width: cs(690);
+    width: vw(690);
 
     @include tablet {
       width: cs(467);
@@ -90,10 +96,11 @@
   }
 
   &__info-wrapper {
-    margin-bottom: cs($marginElement);
-    width: cs(600);
+    margin-bottom: vw($marginElement);
+    width: vw(600);
 
     @include tablet {
+      margin-bottom: cs($marginElement);
       width: 100%;
     }
   }
@@ -101,7 +108,10 @@
   &__info-title {
     color: $navy;
     @include fontType(24, 28, medium);
-    margin-bottom: cs(10);
+    margin-bottom: vw(10);
+    @include tablet {
+      margin-bottom: cs(10);
+    }
   }
 
   &__info-text {
@@ -112,8 +122,8 @@
   }
 
   &__photo {
-    width: cs(774);
-    height: cs(480);
+    width: 49%;
+    height: 100%;
     object-fit: cover;
 
     @include tablet {

@@ -1,5 +1,9 @@
 .documentaion-page {
-  margin-bottom: cs(60);
+  margin-bottom: vw(60);
+
+  @include tablet {
+    margin-bottom: cs(60);
+  }
 
   &__cities {
     display: flex;
@@ -17,11 +21,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: cs(462);
-    height: cs(82);
+    width: vw(462);
+    height: vw(82);
     padding-bottom: cs(20);
     border-bottom: 1px solid $lineColor;
-    margin-bottom: cs(15);
+    margin-bottom: vw(15);
 
     &:hover {
       .text-btn {
@@ -36,6 +40,7 @@
       height: auto;
       flex-direction: column;
       padding-bottom: cs(15);
+      margin-bottom: cs(15);
     }
   }
 }
@@ -63,25 +68,31 @@
   }
 
   &__button {
-    margin: 0 cs(30) 0 0;
+    margin: 0 vw(30) 0 0;
     width: auto;
 
     &::after {
-      left: cs(110);
+      left: vw(110);
     }
 
     &:hover {
       &::after {
-        left: cs(120);
+        left: vw(120);
       }
     }
 
     @include tablet {
-      margin-top: cs(5);
+      margin: cs(5) cs(30) 0 0;
       @include fontType(18, 23, bold);
 
       &::after {
         top: 20%;
+      }
+
+      &:hover {
+        &::after {
+          left: cs(120);
+        }
       }
     }
 

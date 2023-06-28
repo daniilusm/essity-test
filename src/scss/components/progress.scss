@@ -1,9 +1,9 @@
 .progress-page {
   &__breadcrumbs {
-    padding: cs(50) cs(170) 0;
+    padding: vw(50) vw(170) 0;
 
     @include desktop {
-      padding: cs(50) cs(90) 0;
+      padding: vw(50) vw(90) 0;
     }
 
     @include tablet {
@@ -33,8 +33,8 @@
   }
 
   &__welcome-content {
-    width: cs(1380);
-    padding-bottom: cs(50);
+    width: vw(1380);
+    padding-bottom: vw(50);
 
     @include tablet {
       width: auto;
@@ -47,7 +47,7 @@
   }
 
   &__page-description {
-    margin-top: cs(30);
+    margin-top: vw(30);
 
     @include mobile {
       margin-top: cs(20);
@@ -76,8 +76,8 @@
 }
 
 .awards {
-  padding-top: cs(50);
-  padding-bottom: cs(100);
+  padding-top: vw(50);
+  padding-bottom: vw(100);
   background-color: $greyBckg;
 
   @include tablet {
@@ -100,7 +100,7 @@
   }
 
   &__left-path {
-    width: cs(757);
+    width: vw(757);
 
     @include tablet {
       width: cs(467);
@@ -113,7 +113,7 @@
   }
 
   &__right-path {
-    width: cs(757);
+    width: vw(757);
 
     @include tablet {
       width: cs(450);
@@ -125,8 +125,12 @@
   }
 
   &__description {
-    margin-bottom: cs(15);
+    margin-bottom: vw(15);
     @include arialFont(18, 23);
+
+    @include tablet {
+      margin-bottom: cs(15);
+    }
 
     @include mobile {
       @include arialFont(16, 21);
@@ -136,20 +140,33 @@
 
 .awards-list {
   &__item {
-    margin-left: cs(20);
+    margin-left: vw(20);
     @include arialFont(18, 23);
     @include notLast {
-      margin-bottom: cs(12);
+      margin-bottom: vw(12);
     }
 
     &::before {
       content: '\2022';
       color: $deepCerise;
       font-weight: bold;
-      font-size: cs(20);
+      font-size: vw(20);
       display: inline-block;
-      width: cs(20);
-      margin-left: cs(-20);
+      width: vw(20);
+      margin-left: vw(-20);
+    }
+
+    @include tablet {
+      margin-left: cs(20);
+      @include notLast {
+        margin-bottom: cs(12);
+      }
+
+      &::before {
+        font-size: cs(20);
+        width: cs(20);
+        margin-left: cs(-20);
+      }
     }
 
     @include mobile {

@@ -1,5 +1,5 @@
 .students-history__breadcrumbs {
-  margin-bottom: cs(36);
+  margin-bottom: vw(36);
 
   @include tablet {
     margin-top: cs(60);
@@ -13,13 +13,13 @@
 }
 .story {
   &__container {
-    margin-bottom: cs(67);
+    margin-bottom: vw(67);
 
     @include tablet {
       margin-bottom: cs(27);
     }
 
-    @include mobile{
+    @include mobile {
       margin-bottom: 0;
     }
   }
@@ -31,14 +31,14 @@
     @include mobile {
       width: cs(360);
 
-      h1{
+      h1 {
         width: cs(270);
       }
     }
   }
 
   &__description {
-    margin-top: cs(65);
+    margin-top: vw(65);
     @include fontType(24, 31, medium);
 
     @include tablet {
@@ -55,7 +55,7 @@
   &__section {
     display: flex;
     justify-content: space-between;
-    margin-top: cs(50);
+    margin-top: vw(50);
 
     @include tablet {
       margin-top: cs(60);
@@ -68,27 +68,27 @@
   }
 
   &__block {
-    margin-bottom: cs(34);
+    margin-bottom: vw(34);
 
     @include tablet {
       margin-bottom: cs(31);
     }
 
-    @include mobile{
+    @include mobile {
       margin-bottom: cs(36);
     }
   }
 
-  &__question{
+  &__question {
     color: $navy;
     @include fontType(24, 31, medium);
-    margin-bottom: cs(13);
+    margin-bottom: vw(13);
 
-    @include tablet{
+    @include tablet {
       margin-bottom: cs(16);
     }
 
-    @include mobile{
+    @include mobile {
       @include fontType(20, 26, medium);
       margin-bottom: cs(14);
     }
@@ -96,7 +96,7 @@
 }
 
 .student-info {
-  width: cs(774);
+  width: vw(774);
 
   @include tablet {
     width: cs(961);
@@ -106,13 +106,13 @@
   }
 
   &__title {
-    margin-bottom: cs(21);
+    margin-bottom: vw(21);
 
     @include tablet {
       margin-bottom: cs(60);
     }
 
-    @include mobile{
+    @include mobile {
       margin-bottom: cs(45);
     }
   }
@@ -133,8 +133,8 @@
 
 .avatar-container {
   position: relative;
-  width: cs(775);
-  height: cs(674);
+  width: vw(775);
+  height: vw(674);
   overflow: hidden;
 
   @include tablet {

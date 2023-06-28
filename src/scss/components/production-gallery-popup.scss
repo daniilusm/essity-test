@@ -1,7 +1,11 @@
 .gallery-popup {
   display: flex;
   align-items: center;
-  padding: cs(100) cs($desktopContainer);
+  padding: vw(100) vw($desktopContainer);
+
+  @include tablet {
+    padding: cs(100) cs($desktopContainer);
+  }
 
   @include mobile {
     padding: 65% cs($mobileContainer);
@@ -17,8 +21,8 @@
   &__cross {
     cursor: pointer;
     position: absolute;
-    top: cs(40);
-    right: cs(40);
+    top: vw(40);
+    right: vw(40);
 
     @include tablet {
       width: cs(20);

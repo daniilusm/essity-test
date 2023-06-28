@@ -28,7 +28,11 @@
   }
 
   &__button {
-    width: cs(305);
+    width: vw(305);
+
+    @include tablet {
+      width: cs(305);
+    }
 
     @include mobile {
       width: 100%;
@@ -36,7 +40,11 @@
   }
 
   &__page-description {
-    margin-top: cs(25);
+    margin-top: vw(25);
+
+    @include tablet {
+      margin-top: cs(25);
+    }
   }
 
   &__stories-wrapper {
@@ -52,7 +60,7 @@
     color: $greyColor;
     @include arialFont(24, 31);
     font-style: italic;
-    margin-top: cs(20);
+    margin-top: vw(20);
 
     @include tablet {
       @include arialFont(16, 21);
@@ -63,7 +71,7 @@
 
   &__sub-title {
     @include fontType(22, 23, semiBold);
-    margin: cs(20) 0 0;
+    margin: vw(20) 0 0;
 
     @include tablet {
       @include fontType(18, 23, semiBold);
@@ -74,7 +82,7 @@
   &__student-name {
     color: $greyColor;
     @include arialFont(18, 23);
-    margin: cs(10) 0 cs(20);
+    margin: vw(10) 0 vw(20);
 
     @include tablet {
       @include arialFont(15, 19);

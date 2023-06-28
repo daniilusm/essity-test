@@ -2,7 +2,11 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: cs(20);
+    grid-gap: vw(20);
+
+    @include tablet {
+      grid-gap: cs(20);
+    }
 
     @include mobile {
       grid-template-columns: auto;
@@ -10,8 +14,8 @@
   }
 
   &__card {
-    width: cs(513);
-    margin-bottom: cs(40);
+    width: 100%;
+    margin-bottom: vw(40);
 
     &:hover {
       .text-btn {
@@ -26,7 +30,16 @@
     }
 
     @include tablet {
+      margin-bottom: cs(40);
       width: cs(307);
+
+      &:hover {
+        .text-btn {
+          &::after {
+            left: cs(125);
+          }
+        }
+      }
     }
     @include mobile {
       @include notLast {

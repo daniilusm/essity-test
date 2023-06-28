@@ -1,17 +1,17 @@
 .news-post {
   &__breadcrumbs {
-    margin-bottom: cs(35);
+    margin-bottom: vw(35);
+
+    @include tablet {
+      margin-bottom: cs(35);
+    }
   }
 
   &__page {
     display: flex;
     justify-content: space-between;
-    margin-top: cs(66);
-    margin-bottom: cs(84);
-
-    @include mobile {
-      flex-direction: column;
-    }
+    margin-top: vw(66);
+    margin-bottom: vw(84);
 
     @include tablet {
       margin-top: cs(80);
@@ -19,13 +19,14 @@
     }
 
     @include mobile {
+      flex-direction: column;
       margin-top: cs(40);
       margin-bottom: cs(40);
     }
   }
 
   &__content {
-    width: cs(1042);
+    width: vw(1042);
 
     @include tablet {
       width: cs(636);
@@ -37,11 +38,12 @@
   }
 
   &__date {
-    margin-bottom: cs(15);
+    margin-bottom: vw(15);
     color: $greyColor;
     @include arialFont(16, 20.8);
 
     @include tablet {
+      margin-bottom: cs(15);
       @include arialFont(12, 13.8);
     }
 
@@ -54,6 +56,10 @@
     margin-bottom: cs(14);
     @include arialFont(18, 23);
 
+    @include tablet {
+      margin-bottom: vw(14);
+    }
+
     @include mobile {
       @include arialFont(16, 20);
     }
@@ -61,11 +67,10 @@
 
   &__img {
     position: relative;
-    width: cs(1043);
-    height: cs(509);
+    aspect-ratio: 16/8;
     overflow: hidden;
-    margin-top: cs(50);
-    margin-bottom: cs(46);
+    margin-top: vw(50);
+    margin-bottom: vw(46);
 
     @include tablet {
       width: cs(636);
@@ -88,7 +93,11 @@
     }
   }
   &__similar {
-    width: cs(355);
+    width: vw(355);
+
+    @include tablet {
+      width: cs(355);
+    }
 
     @include tablet {
       width: cs(308);
@@ -98,7 +107,7 @@
 .similar {
   &__main-title {
     color: $navy;
-    margin-bottom: cs(30);
+    margin-bottom: vw(30);
     @include fontType(28, 36, medium);
 
     @include tablet {
@@ -128,7 +137,7 @@
   }
 
   &__date {
-    margin-bottom: cs(15);
+    margin-bottom: vw(15);
     color: $greyColor;
     @include arialFont(12, 15.6);
 
@@ -139,7 +148,7 @@
   }
 
   &__title {
-    margin-bottom: cs(15);
+    margin-bottom: vw(15);
     color: $navy;
     @include fontType(18, 18.9);
 
@@ -150,16 +159,17 @@
   }
 
   &__text {
-    margin-bottom: cs(30);
+    margin-bottom: vw(30);
     color: $blackColor;
     @include arialFont(15, 19.5);
-    max-height: cs(80);
+    max-height: vw(80);
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
 
     @include tablet {
+      max-height: cs(80);
       margin-bottom: cs(20);
       @include arialFont(14, 18.2);
     }

@@ -28,7 +28,7 @@ body {
 }
 
 [class*='__block'] {
-  margin-bottom: cs($desktopMarginBlock);
+  margin-bottom: vw($desktopMarginBlock);
 
   @include tablet {
     margin-bottom: cs($tabletMarginBlock);
@@ -123,12 +123,13 @@ body {
   &__sub-title {
     color: $navy;
     @include fontType(36, 43, medium);
-    margin: cs(50) 0 cs(20);
-    width: cs(775);
+    margin: vw(50) 0 vw(20);
+    width: vw(775);
 
     @include tablet {
       @include fontType(32, 42, medium);
       margin: cs(70) 0 0;
+      width: cs(775);
     }
 
     @include mobile {
@@ -140,14 +141,17 @@ body {
 
   &__description {
     @include fontType(24, 31, medium);
-    width: cs(1045);
+    width: vw(1045);
     @include notFirst {
-      margin-top: cs(30);
+      margin-top: vw(30);
     }
 
     @include tablet {
       @include fontType(22, 29, medium);
       width: 100%;
+      @include notFirst {
+        margin-top: cs(30);
+      }
     }
 
     @include mobile {
@@ -213,9 +217,10 @@ body {
 .section-title {
   color: $navy;
   @include fontType(36, 43, medium);
-  margin-bottom: cs(30);
+  margin-bottom: vw(30);
 
   @include tablet {
+    margin-bottom: cs(30);
     @include fontType(32, 42, medium);
   }
 
@@ -240,8 +245,12 @@ body {
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
-  margin: cs(50) 0;
+  margin: vw(50) 0;
   width: max-content;
+
+  @include tablet {
+    margin: cs(50) 0;
+  }
 
   @include mobile {
     margin: cs(20) 0;
@@ -259,9 +268,9 @@ body {
     @include fontType(14, 18, regular);
     border-bottom: 1px solid transparent;
     transition: color 0.1s ease;
-    padding-bottom: cs(3);
+    padding-bottom: vw(3);
     @include notLast {
-      margin-right: cs(30);
+      margin-right: vw(30);
       &::after {
         content: '';
         @include arrow(35%, right, -20, '0E0E0E', right, 10, 7);
@@ -274,6 +283,8 @@ body {
     }
 
     @include tablet {
+      padding-bottom: cs(3);
+      margin-right: cs(30);
       @include notLast {
         &::after {
           @include arrow(30%, right, -20, '0E0E0E', right, 10, 7);
@@ -313,16 +324,24 @@ body {
     @include fontType(20, 26, medium);
     position: relative;
     border-bottom: 1px solid transparent;
-    padding-bottom: cs(5);
+    padding-bottom: vw(5);
     transition: color 0.3s, border-bottom 0.3s;
     cursor: pointer;
 
-    @include mobile {
-      @include fontType(16, 21, medium);
+    @include notLast {
+      margin-right: vw(40);
     }
 
-    @include notLast {
-      margin-right: cs(40);
+    @include tablet {
+      padding-bottom: cs(5);
+
+      @include notLast {
+        margin-right: cs(40);
+      }
+    }
+
+    @include mobile {
+      @include fontType(16, 21, medium);
     }
 
     &:hover {
