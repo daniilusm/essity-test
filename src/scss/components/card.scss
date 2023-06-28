@@ -1,11 +1,15 @@
 .cards {
   &__item {
-    width: cs(506);
+    width: 33%;
+
+    @include notLast {
+      margin-right: vw(30);
+    }
 
     &:hover {
       .text-btn {
         &::after {
-          left: cs(130);
+          left: vw(130);
         }
       }
 
@@ -16,6 +20,10 @@
 
     @include tablet {
       width: cs(307);
+
+      @include notLast {
+        margin-right: 0;
+      }
     }
   }
 
@@ -53,8 +61,7 @@
 .card {
   &__photo-wrapper {
     overflow: hidden;
-    width: cs(506);
-    height: cs(300);
+    aspect-ratio: 16/9;
 
     @include tablet {
       object-fit: cover;
@@ -86,7 +93,7 @@
 
   &__sub-title {
     color: $navy;
-    @include fixFontType(18, 23, semiBold);
+    @include fontType(18, 23, semiBold);
     margin: cs(15) 0;
 
     @include tablet {
@@ -95,7 +102,7 @@
   }
 
   &__text {
-    @include fixFontType(16, 21, medium);
+    @include fontType(16, 21, medium);
 
     @include tablet {
       @include fontType(14, 18, medium);

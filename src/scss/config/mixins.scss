@@ -189,6 +189,12 @@
   }
 }
 
+@mixin mediumDesktop() {
+  @media only screen and (max-width: #{$mediumScreenSize}px) {
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media only screen and (max-width: #{$tabletScreenSize}px) {
     @content;
@@ -205,6 +211,10 @@
   @return calc(((#{$pixels} / var(--gfs)) * 100) * 1vw);
 }
 
+@function vw($pixels) {
+  @return #{rem($pixels)};
+}
+
 @function clampSize($min, $max) {
   @return max(#{$min}px, #{cs($max)});
 }
@@ -212,27 +222,12 @@
 @mixin fontType($font-size, $line-height, $font-type: regular) {
   font-family: 'Manrope', sans-serif;
   font-style: normal;
-  font-size: cs($font-size);
-  line-height: cs($line-height);
-  @if $font-type==bold {
-    font-weight: 700;
+  font-size: vw($font-size);
+  line-height: vw($line-height);
+  @include tablet {
+    font-size: cs($font-size);
+    line-height: cs($line-height);
   }
-  @if $font-type==semiBold {
-    font-weight: 600;
-  }
-  @if $font-type==medium {
-    font-weight: 500;
-  }
-  @if $font-type==regular {
-    font-weight: 400;
-  }
-}
-
-@mixin fixFontType($font-size, $line-height, $font-type: regular) {
-  font-family: 'Manrope', sans-serif;
-  font-style: normal;
-  font-size: #{$font-size}px;
-  line-height: #{$line-height}px;
   @if $font-type==bold {
     font-weight: 700;
   }
@@ -250,8 +245,12 @@
 @mixin arialFont($font-size, $line-height) {
   font-family: 'Arial', sans-serif;
   font-style: normal;
-  font-size: cs($font-size);
-  line-height: cs($line-height);
+  font-size: vw($font-size);
+  line-height: vw($line-height);
+  @include tablet {
+    font-size: cs($font-size);
+    line-height: cs($line-height);
+  }
   font-weight: 400;
 }
 
@@ -261,14 +260,24 @@
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23#{$color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   background-size: contain;
   background-repeat: no-repeat;
-  width: cs($width);
-  height: cs($height);
+  width: vw($width);
+  height: vw($height);
+  @include tablet {
+    width: cs($width);
+    height: cs($height);
+  }
   transition: all 0.3s ease;
   @if $position== 'right' {
-    right: cs($indent);
+    right: vw($indent);
+    @include tablet {
+      right: cs($indent);
+    }
   }
   @if $position== 'left' {
-    left: cs($indent);
+    left: vw($indent);
+    @include tablet {
+      left: cs($indent);
+    }
   }
   @if $direction==bottom {
     transform: rotate(0deg);

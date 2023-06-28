@@ -1,11 +1,7 @@
 .content {
   &__item {
-    padding: cs(70) cs(170) cs($desktopMarginBlock);
+    padding: cs(70) 0 cs($desktopMarginBlock);
     background: $whiteBckg;
-
-    @include desktop {
-      padding: cs(70) cs(90) cs($desktopMarginBlock);
-    }
 
     @include tablet {
       padding: cs(60) cs(32) cs($tabletMarginBlock);
@@ -15,6 +11,23 @@
       padding: cs(30) cs(25) cs($mobileMarginBlock);
     }
   }
+
+  &__item-wrapper {
+    margin: 0 auto;
+    width: vw($bigDesktopWidthContainer);
+
+    @include desktop {
+      width: vw($largeDesktopWidthContainer);
+    }
+
+    @include mediumDesktop {
+      width: vw($desktopWidthContainer);
+    }
+
+    @include tablet {
+      width: auto;
+    }
+  }
 }
 
 .greyBg {
@@ -22,15 +35,11 @@
 }
 
 .welcome {
-  height: cs(684);
+  height: vw(684);
   background-image: url('../../images/main-bg.jpg');
   background-size: cover;
   background-position: 0 75%;
-  padding: cs(125) cs(170);
-
-  @include desktop {
-    padding: cs(125) cs(90);
-  }
+  padding: vw(125) 0;
 
   @include tablet {
     height: cs(640);
@@ -44,10 +53,23 @@
     background-size: cover;
     background-position: right;
   }
+
+  &__page-title {
+    margin: 0 auto;
+    width: vw($bigDesktopWidthContainer);
+
+    @include desktop {
+      width: vw($largeDesktopWidthContainer);
+    }
+
+    @include mediumDesktop {
+      width: vw($desktopWidthContainer);
+    }
+  }
 }
 
 .about-descriptions {
-  margin-top: cs(87);
+  margin-top: vw(87);
 
   @include tablet {
     margin-top: cs(60);
@@ -60,8 +82,8 @@
 
 .main-info {
   &__logo {
-    width: cs(506);
-    height: cs(120);
+    width: 32.1%;
+    height: 100%;
 
     @include tablet {
       width: cs(327);
@@ -85,7 +107,7 @@
   }
 
   &__description {
-    max-width: cs(775);
+    max-width: vw(775);
 
     @include tablet {
       max-width: cs(465);
@@ -113,8 +135,6 @@
 }
 
 .partners-logo {
-  margin: cs($desktopMarginBlock) 0 cs(30);
-
   @include tablet {
     margin: cs($tabletMarginBlock) 0 0;
   }
@@ -123,20 +143,13 @@
     margin-top: cs(40);
   }
 
-  &__wrapper {
-    margin-right: cs(80);
-    @include tablet {
-      margin-right: 0;
-    }
-  }
-
   &__title {
     margin-bottom: 0;
   }
 
   &__logo {
-    width: cs(280);
-    height: cs(280);
+    width: 71%;
+    aspect-ratio: 1/1;
 
     @include tablet {
       width: cs(181);

@@ -6,13 +6,19 @@ body {
 }
 
 [class*='__container'] {
-  padding: 0 cs($bigDesktopContainer);
+  margin: 0 auto;
+  width: vw($bigDesktopWidthContainer);
 
   @include desktop {
-    padding: 0 cs($desktopContainer);
+    width: vw($largeDesktopWidthContainer);
+  }
+
+  @include mediumDesktop {
+    width: vw($desktopWidthContainer);
   }
 
   @include tablet {
+    width: auto;
     padding: 0 cs($tabletContainer);
   }
 
