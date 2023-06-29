@@ -127,7 +127,7 @@
   @include fontType(24, 31, bold);
   width: 100%;
   text-align: start;
-  margin-top: cs(30);
+  margin-top: vw(30);
   background: none;
   color: $deepCerise;
   position: relative;
@@ -139,7 +139,17 @@
 
   &:hover {
     &::after {
-      left: cs(155);
+      left: vw(155);
+    }
+  }
+
+  @include tablet {
+    margin-top: cs(30);
+
+    &:hover {
+      &::after {
+        left: cs(155);
+      }
     }
   }
 
