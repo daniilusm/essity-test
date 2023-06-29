@@ -21,10 +21,20 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 100%;
     padding-bottom: vw(90);
+    width: vw($bigDesktopWidthContainer);
+    margin: 0 auto;
+
+    @include desktop {
+      width: vw($largeDesktopWidthContainer);
+    }
+
+    @include mediumDesktop {
+      width: vw($desktopWidthContainer);
+    }
 
     @include tablet {
+      margin: 0;
       width: auto;
       padding-bottom: cs(45);
     }
@@ -51,19 +61,30 @@
   }
 
   &__logo {
-    width: cs(165);
-    height: cs(90);
+    width: vw(165);
+    height: vw(90);
+
+    @include tablet {
+      width: cs(165);
+      height: cs(90);
+    }
   }
 
   &__breadcrumbs {
-    padding: vw(50) vw(170) 0;
-    margin: 0;
+    padding-top: vw(50);
+    width: vw($bigDesktopWidthContainer);
+    margin: 0 auto;
 
     @include desktop {
-      padding: cs(50) cs(90) 0;
+      width: vw($largeDesktopWidthContainer);
+    }
+
+    @include mediumDesktop {
+      width: vw($desktopWidthContainer);
     }
 
     @include tablet {
+      width: auto;
       padding: cs(60) cs(32) 0;
     }
 
@@ -169,19 +190,30 @@
   }
 
   &__link {
-    padding: cs(30);
+    padding: vw(30);
     display: flex;
     align-items: center;
     border: 1px solid $lineColor;
+    @include tablet {
+      padding: cs(30);
+    }
   }
 
   &__ok {
-    width: cs(260);
-    height: cs(55);
+    width: vw(260);
+    height: vw(55);
+    @include tablet {
+      width: cs(260);
+      height: cs(55);
+    }
   }
 
   &__vk {
-    width: cs(265);
-    height: cs(45);
+    width: vw(265);
+    height: vw(45);
+    @include tablet {
+      width: cs(265);
+      height: cs(45);
+    }
   }
 }

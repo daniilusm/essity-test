@@ -109,6 +109,10 @@
   &__description {
     max-width: vw(775);
 
+    @include mediumDesktop {
+      max-width: vw(500);
+    }
+
     @include tablet {
       max-width: cs(465);
     }

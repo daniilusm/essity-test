@@ -146,9 +146,12 @@ body {
       margin-top: vw(30);
     }
 
+    @include mediumDesktop {
+      width: 100%;
+    }
+
     @include tablet {
       @include fontType(22, 29, medium);
-      width: 100%;
       @include notFirst {
         margin-top: cs(30);
       }
@@ -357,4 +360,30 @@ body {
 
 .tabs__panel {
   display: none;
+}
+
+.mySwiper {
+  position: relative;
+}
+
+.swipe-icon {
+  position: absolute;
+  right: cs(10);
+  top: cs(10);
+  width: cs(30);
+  height: cs(30);
+  z-index: 2;
+  animation: reil 1.2s linear infinite;
+
+  @keyframes reil {
+    0% {
+      right: cs(10);
+    }
+    50% {
+      right: cs(30);
+    }
+    100% {
+      right: cs(10);
+    }
+  }
 }

@@ -18,8 +18,17 @@
   }
 
   &__welcome-content {
-    width: vw(1380);
+    width: vw($bigDesktopWidthContainer);
+    margin: 0 auto;
     padding-bottom: vw(70);
+
+    @include desktop {
+      width: vw($largeDesktopWidthContainer);
+    }
+
+    @include mediumDesktop {
+      width: vw($desktopWidthContainer);
+    }
 
     @include tablet {
       width: auto;
@@ -32,11 +41,16 @@
   }
 
   &__breadcrumbs {
-    padding: vw(50) vw(170) 0;
-    margin: 0;
+    padding-top: vw(50);
+    width: vw($bigDesktopWidthContainer);
+    margin: 0 auto;
 
     @include desktop {
-      padding: vw(50) vw(90) 0;
+      width: vw($largeDesktopWidthContainer);
+    }
+
+    @include mediumDesktop {
+      width: vw($desktopWidthContainer);
     }
 
     @include tablet {
@@ -61,11 +75,13 @@
   }
 
   &__page-description {
+    width: 65%;
     margin-top: vw(50);
     color: $whiteColor;
     @include fontType(24, 31, medium);
 
     @include tablet {
+      width: auto;
       margin-top: cs(50);
       @include fontType(22, 29, medium);
     }

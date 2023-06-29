@@ -16,6 +16,7 @@
     position: sticky;
     top: vw(50);
     height: max-content;
+    width: 30%;
 
     @include tablet {
       margin-top: cs(5);
@@ -148,7 +149,7 @@
 
 .press-release-item {
   display: block;
-  width: vw(927);
+  width: 70%;
   cursor: pointer;
   margin-bottom: vw(50);
 

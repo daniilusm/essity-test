@@ -68,6 +68,11 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @include mediumDesktop {
+      width: 73%;
+      padding-left: vw(20);
+    }
+
     @include tablet {
       width: cs(654);
     }
