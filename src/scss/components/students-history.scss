@@ -96,7 +96,7 @@
 }
 
 .student-info {
-  width: vw(774);
+  width: 50%;
 
   @include tablet {
     width: cs(961);
@@ -133,7 +133,7 @@
 
 .avatar-container {
   position: relative;
-  width: vw(775);
+  width: 45%;
   height: vw(674);
   overflow: hidden;
 

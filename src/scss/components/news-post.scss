@@ -26,7 +26,7 @@
   }
 
   &__content {
-    width: vw(1042);
+    width: 66%;
 
     @include tablet {
       width: cs(636);
@@ -93,7 +93,11 @@
     }
   }
   &__similar {
-    width: vw(355);
+    width: 22%;
+
+    @include mediumDesktop {
+      width: 30%;
+    }
 
     @include tablet {
       width: cs(355);

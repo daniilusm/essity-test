@@ -276,7 +276,7 @@ body {
       margin-right: vw(30);
       &::after {
         content: '';
-        @include arrow(35%, right, -20, '0E0E0E', right, 10, 7);
+        @include arrow(28%, right, -20, '0E0E0E', right, 10, 7);
       }
     }
 

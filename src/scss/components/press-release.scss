@@ -1,7 +1,6 @@
 .press-release-page {
   &__page-title {
     margin-bottom: vw(25);
-    width: 96%;
 
     @include tablet {
       margin-bottom: cs(45);
@@ -18,7 +17,7 @@
 }
 
 .press-release {
-  width: vw(870);
+  width: 55%;
 
   @include tablet {
     width: auto;

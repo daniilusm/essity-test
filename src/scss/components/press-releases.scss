@@ -16,7 +16,7 @@
     position: sticky;
     top: vw(50);
     height: max-content;
-    width: 30%;
+    width: vw(230);
 
     @include tablet {
       margin-top: cs(5);
@@ -72,9 +72,15 @@
   &__content {
     display: flex;
     flex-direction: row;
+    width: 70%;
+
+    @include mediumDesktop {
+      width: 75%;
+    }
 
     @include tablet {
       flex-direction: column;
+      width: auto;
     }
   }
 
@@ -149,7 +155,7 @@
 
 .press-release-item {
   display: block;
-  width: 70%;
+  width: 100%;
   cursor: pointer;
   margin-bottom: vw(50);
 
