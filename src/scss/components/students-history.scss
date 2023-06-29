@@ -137,6 +137,11 @@
   height: vw(674);
   overflow: hidden;
 
+  @include mediumDesktop {
+    position: sticky;
+    top: vw(30);
+  }
+
   @include tablet {
     width: cs(467);
     height: cs(475);

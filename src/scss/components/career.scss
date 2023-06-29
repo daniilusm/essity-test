@@ -62,9 +62,12 @@
     font-style: italic;
     margin-top: vw(20);
 
-    @include tablet {
+    @include mediumDesktop {
       @include arialFont(16, 21);
       font-style: italic;
+    }
+
+    @include tablet {
       margin-top: cs(15);
     }
   }

@@ -84,7 +84,11 @@
   }
 
   &__left {
-    width: vw(690);
+    width: 39%;
+
+    @include mediumDesktop {
+      width: 45%;
+    }
 
     @include tablet {
       width: cs(467);
@@ -97,7 +101,7 @@
 
   &__info-wrapper {
     margin-bottom: vw($marginElement);
-    width: vw(600);
+    width: 100%;
 
     @include tablet {
       margin-bottom: cs($marginElement);

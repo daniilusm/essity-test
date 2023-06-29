@@ -159,6 +159,15 @@
 
   &__page-title {
     color: $whiteColor;
+    @include mediumDesktop {
+      @include fontType(60, 69, medium);
+      width: 90%;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
     @include mobile {
       @include fontType(32, 41, medium);
     }
@@ -169,7 +178,7 @@
     color: $whiteColor;
     @include fontType(14, 18, regular);
 
-    @include tablet {
+    @include mediumDesktop {
       margin-bottom: cs(20);
     }
 

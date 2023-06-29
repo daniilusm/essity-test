@@ -2,10 +2,14 @@
   &__photo {
     height: auto;
 
-    @include tablet {
-      height: cs(366);
+    @include mediumDesktop {
       position: sticky;
       top: cs(30);
+      height: 100%;
+    }
+
+    @include tablet {
+      height: cs(366);
     }
 
     @include mobile {

@@ -6,8 +6,9 @@
   }
 
   &__cities {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    grid-gap: vw(30);
 
     @include mobile {
       flex-direction: column;
@@ -16,12 +17,12 @@
 }
 
 .documentaion-city {
+  width: 100%;
   &__item {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: vw(462);
     height: vw(82);
     padding-bottom: cs(20);
     border-bottom: 1px solid $lineColor;
@@ -58,7 +59,7 @@
   &__text {
     @include fontType(24, 31, regular);
 
-    @include tablet {
+    @include mediumDesktop {
       @include fontType(18, 23, regular);
     }
 
@@ -81,9 +82,12 @@
       }
     }
 
+    @include mediumDesktop {
+      @include fontType(18, 23, bold);
+    }
+
     @include tablet {
       margin: cs(5) cs(30) 0 0;
-      @include fontType(18, 23, bold);
 
       &::after {
         top: 20%;
