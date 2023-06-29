@@ -17,7 +17,7 @@
   }
 
   &__content {
-    max-width: vw(774);
+    max-width: 48%;
 
     @include tablet {
       max-width: cs(467);
@@ -60,6 +60,10 @@
     object-fit: cover;
     width: 49%;
     height: vw(480);
+
+    @include mediumDesktop {
+      height: auto;
+    }
 
     @include tablet {
       width: cs(467);
