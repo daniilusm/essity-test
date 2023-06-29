@@ -165,9 +165,13 @@
 
 .small-button {
   @include fontType(18, 23, semiBold);
-  margin-top: cs(15);
+  margin-top: vw(15);
 
   &::after {
     @include arrow(35%, left, 115, $pinkArrow, right, 12, 7);
+  }
+
+  @include tablet {
+    margin-top: cs(15);
   }
 }
