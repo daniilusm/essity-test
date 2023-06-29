@@ -81,8 +81,8 @@
 }
 
 .main-info {
-  &__logo {
-    width: 80%;
+  &__logo-wrapper {
+    width: 32.1%;
     height: 100%;
 
     @include tablet {
@@ -94,6 +94,10 @@
       width: cs(241);
       height: cs(58);
     }
+  }
+  &__logo {
+    width: 100%;
+    height: 100%;
   }
 
   &__info {
