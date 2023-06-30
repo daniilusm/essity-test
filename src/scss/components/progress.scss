@@ -65,6 +65,7 @@
     width: 70%;
 
     @include mobile {
+      width: auto;
       margin-top: cs(20);
     }
   }
@@ -103,6 +104,24 @@
   @include mobile {
     padding-top: cs(50);
     padding-bottom: cs(55);
+  }
+
+  &__wrapper {
+    width: vw($bigDesktopWidthContainer);
+    margin: 0 auto;
+
+    @include desktop {
+      width: vw($largeDesktopWidthContainer);
+    }
+
+    @include mediumDesktop {
+      width: vw($desktopWidthContainer);
+    }
+
+    @include tablet {
+      width: auto;
+      padding: cs(40) cs(32) 0;
+    }
   }
 
   &__list {

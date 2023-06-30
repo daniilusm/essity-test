@@ -114,6 +114,11 @@
       color: $whiteColor;
       @include fontType(20, 23, regular);
     }
+
+    p {
+      color: $whiteColor;
+      @include fontType(24, 25, regular);
+    }
   }
 }
 

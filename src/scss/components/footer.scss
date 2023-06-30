@@ -30,10 +30,15 @@
 
   &__link {
     color: $whiteColor;
+    transition: text-decoration 0.3s;
     @include arialFont(14, 18);
 
     @include notLast {
       margin-bottom: vw(15);
+    }
+
+    &:hover {
+      text-decoration: underline;
     }
 
     @include tablet {
