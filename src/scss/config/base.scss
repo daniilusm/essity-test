@@ -312,7 +312,7 @@ body {
   flex-direction: row;
 
   @include mobile {
-    width: 130%;
+    width: max-content;
   }
 
   &__wrapper {

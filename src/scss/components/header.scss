@@ -65,6 +65,10 @@
     color: $whiteBckg;
     background-color: $deepCerise;
   }
+
+  @include tablet {
+    height: cs(46);
+  }
 }
 
 .menu-dropdown {

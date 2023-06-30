@@ -50,6 +50,10 @@
   &__button {
     width: vw(123);
 
+    @include tablet {
+      width: cs(123);
+    }
+
     @include mobile {
       width: 100%;
       margin-top: cs(40);

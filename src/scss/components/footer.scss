@@ -74,11 +74,12 @@
     }
 
     @include tablet {
+      padding-left: 0;
       width: cs(654);
     }
 
     @include mobile {
-      width: auto;
+      width: cs(320);
     }
   }
 
@@ -160,7 +161,6 @@
     grid-template-columns: repeat(3, cs(188));
     grid-template-rows: repeat(2, cs(220));
     grid-gap: cs(40);
-    margin-bottom: cs(-50);
   }
 }
 
