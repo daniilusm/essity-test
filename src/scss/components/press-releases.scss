@@ -232,3 +232,17 @@
 .current-year-link {
   color: $navy;
 }
+
+.dropdown-press {
+  position: relative;
+  width: max-content;
+  margin-bottom: cs(20);
+  cursor: pointer;
+  color: $navy;
+  @include fontType(20, 26, medium);
+
+  &::after {
+    content: '';
+    @include arrow(30%, right, -30, $blueArrow, bottom, 13, 13);
+  }
+}

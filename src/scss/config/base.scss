@@ -166,23 +166,6 @@ body {
   }
 }
 
-.mobile-hidden {
-  @include mobile {
-    display: none !important;
-    visibility: hidden !important;
-  }
-}
-
-.mobile-visible {
-  display: none !important;
-  visibility: hidden !important;
-
-  @include mobile {
-    display: block !important;
-    visibility: visible !important;
-  }
-}
-
 .tablet-hidden {
   @include tablet {
     display: none !important;
@@ -195,6 +178,23 @@ body {
   visibility: hidden !important;
 
   @include tablet {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+.mobile-hidden {
+  @include mobile {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.mobile-visible {
+  display: none !important;
+  visibility: hidden !important;
+
+  @include mobile {
     display: block !important;
     visibility: visible !important;
   }
