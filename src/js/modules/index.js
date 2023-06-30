@@ -17,9 +17,6 @@ const swiper = new Swiper('.mySwiper', {
   spaceBetween: 30,
 });
 
-swiper.init();
-gallerySwiper.init();
-
 function isWebp() {
   const testWebp = (callback) => {
     const webP = new Image();
@@ -109,4 +106,4 @@ const togglePopupWindows = () => {
   }
 };
 
-export { isWebp, togglePopupWindows, fixedNavPage };
+export { isWebp, togglePopupWindows, fixedNavPage, swiper, gallerySwiper };

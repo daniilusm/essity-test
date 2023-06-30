@@ -1,12 +1,24 @@
-import { isWebp, togglePopupWindows, fixedNavPage } from './modules';
+import {
+  isWebp,
+  togglePopupWindows,
+  fixedNavPage,
+  swiper,
+  gallerySwiper,
+} from './modules';
 
 import BurgerMenu from './modules/BurgerMenu';
 import DropDown from './modules/DropDown';
 
 import Tabs from './modules/Tabs';
+
 isWebp();
-new BurgerMenu().init();
-new DropDown().init();
+const burger = new BurgerMenu().init();
+const dropdown = new DropDown().init();
+
+swiper.init();
+gallerySwiper.init();
+
+console.info(burger);
 
 togglePopupWindows();
 fixedNavPage();
