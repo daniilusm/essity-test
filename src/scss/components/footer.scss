@@ -155,7 +155,6 @@
   grid-template-columns: repeat(3, vw(260));
   grid-template-rows: repeat(2, vw(220));
   grid-gap: vw(20);
-  margin-bottom: vw(-50);
 
   @include tablet {
     grid-template-columns: repeat(3, cs(188));

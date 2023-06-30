@@ -78,33 +78,35 @@ const fixedNavPage = () => {
 };
 
 const togglePopupWindows = () => {
-  document.addEventListener('click', ({ target }) => {
-    if (target.closest('[data-type]')) {
-      const popup = document.querySelector(
-        `[data-popup="${target.dataset.type}"]`
-      );
+  if (window.innerWidth > 550) {
+    document.addEventListener('click', ({ target }) => {
+      if (target.closest('[data-type]')) {
+        const popup = document.querySelector(
+          `[data-popup="${target.dataset.type}"]`
+        );
 
-      if (target.dataset.type === 'production-gallery') {
-        gallerySwiper.slideTo(target.dataset.slide);
+        if (target.dataset.type === 'production-gallery') {
+          gallerySwiper.slideTo(target.dataset.slide);
+        }
+
+        if (document.querySelector('._is-open')) {
+          document.querySelectorAll('._is-open').forEach((modal) => {
+            modal.classList.remove('_is-open');
+          });
+        }
+
+        popup.classList.add('_is-open');
+        toggleBodyLock(true);
       }
 
-      if (document.querySelector('._is-open')) {
-        document.querySelectorAll('._is-open').forEach((modal) => {
-          modal.classList.remove('_is-open');
-        });
+      if (target.closest('.button-close')) {
+        const popup = target.closest('._overlay-bg');
+
+        popup.classList.remove('_is-open');
+        toggleBodyLock(false);
       }
-
-      popup.classList.add('_is-open');
-      toggleBodyLock(true);
-    }
-
-    if (target.closest('.button-close')) {
-      const popup = target.closest('._overlay-bg');
-
-      popup.classList.remove('_is-open');
-      toggleBodyLock(false);
-    }
-  });
+    });
+  }
 };
 
 export { isWebp, togglePopupWindows, fixedNavPage };
