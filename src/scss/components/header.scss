@@ -29,7 +29,7 @@
   align-items: center;
 
   &__button {
-    margin-left: vw(105);
+    margin-left: vw(75);
     width: vw(180);
   }
 
@@ -40,9 +40,9 @@
   &__item {
     position: relative;
     @include notLast {
-      margin-right: vw(60);
+      margin-right: vw(30);
     }
-    padding: vw(24) 0;
+    padding: vw(24) vw(30) vw(24) 0;
 
     @include tablet {
       @include notLast {
@@ -75,6 +75,14 @@
   cursor: pointer;
 
   &:hover {
+    .menu-dropdown__title {
+      color: $deepCerise;
+
+      &::after {
+        @include arrow(45%, right, 10, $pinkArrow, top, 10, 7);
+      }
+    }
+
     .menu-dropdown__wrapper {
       display: block;
     }
@@ -84,18 +92,11 @@
     color: $navy;
     @include fontType(16, 22, bold);
     transition: color 0.3s ease;
+    width: 130%;
 
     &::after {
       content: '';
-      @include arrow(45%, right, -20, $blueArrow, bottom, 10, 7);
-    }
-
-    &:hover {
-      color: $deepCerise;
-
-      &::after {
-        @include arrow(45%, right, -20, $pinkArrow, top, 10, 7);
-      }
+      @include arrow(45%, right, 10, $blueArrow, bottom, 10, 7);
     }
   }
 
