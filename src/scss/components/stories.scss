@@ -12,6 +12,11 @@
 
     @include tablet {
       margin: 0 0 cs(40);
+      padding: 0;
     }
+  }
+
+  &__page-title {
+    margin-top: cs(30);
   }
 }

@@ -5,6 +5,10 @@
     margin-bottom: cs(60);
   }
 
+  &__page-title {
+    margin-top: cs(30);
+  }
+
   &__cities {
     display: grid;
     grid-template-columns: repeat(3, 32%);

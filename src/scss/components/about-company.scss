@@ -11,6 +11,10 @@
     }
   }
 
+  &__page-title {
+    margin-top: cs(20);
+  }
+
   &__page-nav {
     margin: vw(30) 0 vw(60);
     @include tablet {

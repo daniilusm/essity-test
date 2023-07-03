@@ -91,16 +91,21 @@
 
   &__date {
     color: $greyColor;
-    margin-top: cs(15);
+    margin-top: vw(30);
     @include arialFont(12, 14);
+
+    @include tablet {
+      margin-top: cs(30);
+    }
   }
 
   &__sub-title {
     color: $navy;
     @include fontType(18, 23, semiBold);
-    margin: cs(15) 0;
+    margin: vw(15) 0;
 
     @include tablet {
+      margin: cs(15) 0;
       @include fontType(16, 21, medium);
     }
   }

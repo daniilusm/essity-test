@@ -423,3 +423,9 @@ body {
     }
   }
 }
+
+.mobile-margin-0 {
+  @include mobile {
+    margin: 0 !important;
+  }
+}

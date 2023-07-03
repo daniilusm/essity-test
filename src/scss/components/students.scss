@@ -17,4 +17,10 @@
       position: initial;
     }
   }
+
+  &__page-title {
+    @include mobile {
+      margin-top: cs(20);
+    }
+  }
 }
